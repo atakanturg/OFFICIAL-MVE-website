@@ -58,8 +58,8 @@ export function InvestmentSummit() {
             transition={{ delay: 0.6 }}
             className="flex flex-col md:flex-row md:items-center gap-6"
           >
-            <p className="text-[#A0A0A0] text-sm font-medium tracking-wide">
-              Founded by Atakan Turgut & Patrick McDevitt
+            <p className="text-[#A0A0A0] text-sm font-medium tracking-wide uppercase">
+              Investment Branch Captains: Atakan Turgut & Patrick McDevitt
             </p>
             <Link
               href="/investment-summit/details"

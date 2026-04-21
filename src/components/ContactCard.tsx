@@ -19,7 +19,7 @@ export function ContactCard({ name, title, email }: ContactCardProps) {
       <p className="text-[#666666] text-xs tracking-widest uppercase mb-5">{title}</p>
       <a
         href={`mailto:${email}`}
-        className="text-[#C8A55C] font-semibold text-xs tracking-widest uppercase hover:gap-3 transition-all mt-auto flex items-center gap-2 link-underline"
+        className="text-[#C8A55C] font-semibold text-[10px] tracking-wide uppercase hover:gap-3 transition-all mt-auto flex items-center gap-2 link-underline"
       >
         {email} <span className="text-base transition-transform group-hover:translate-x-1">→</span>
       </a>

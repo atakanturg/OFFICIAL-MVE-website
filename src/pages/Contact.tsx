@@ -117,10 +117,10 @@ export function Contact() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-3xl mb-20"
             >
               <motion.div variants={itemVariants}>
-                <ContactCard name="Atakan Turgut" title="Branch Head" email="28aturgut@ransomeverglades.org" />
+                <ContactCard name="Atakan Turgut" title="Investment Branch Captain" email="28aturgut@ransomeverglades.org" />
               </motion.div>
               <motion.div variants={itemVariants}>
-                <ContactCard name="Patrick McDevitt" title="Student Leader" email="28pmcdevitt@ransomeverglades.org" />
+                <ContactCard name="Patrick McDevitt" title="Investment Branch Captain" email="28pmcdevitt@ransomeverglades.org" />
               </motion.div>
             </motion.div>
 
