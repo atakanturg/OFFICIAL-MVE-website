@@ -28,7 +28,7 @@ export function ProgramDescription({ description, className = "" }: ProgramDescr
             className="overflow-hidden"
           >
             <div className="pt-4 pb-2">
-              <div className="text-sm text-[#C8A55C] leading-relaxed max-w-2xl font-medium">
+              <div className="text-sm text-[#A0A0A0] leading-relaxed max-w-2xl font-medium">
                 {description}
               </div>
               <button

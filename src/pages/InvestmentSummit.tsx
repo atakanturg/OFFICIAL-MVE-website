@@ -60,13 +60,13 @@ export function InvestmentSummit() {
             description={
               <>
                 Acting as our capstone event for the first semester, the{" "}
-                <span className="italic text-[#C8A55C] font-heading">
+                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                   Investment Summit
                 </span>{" "}
                 is a multi-round event.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading">
+                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                   Open Round
                 </span>
                 : Potential teams will submit applications in order to prove
@@ -75,7 +75,7 @@ export function InvestmentSummit() {
                 ranging from 1-4 people.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading">
+                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                   Qualifications Round
                 </span>
                 : Selected teams will be assigned a recognizable company (under
@@ -84,7 +84,7 @@ export function InvestmentSummit() {
                 buying their stock.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading">
+                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                   Finals
                 </span>
                 : Finalist teams will present in a live event in front of

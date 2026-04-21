@@ -86,11 +86,11 @@ export function Reason() {
             <ProgramDescription
               description={
                 <>
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     REASON
                   </span>{" "}
                   leverages the{" "}
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     Ransom Everglades Alumni and Parent Network
                   </span>{" "}
                   and esteemed guests. In various breakout rooms, students will

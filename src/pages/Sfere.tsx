@@ -88,20 +88,20 @@ export function Sfere() {
               description={
                 <>
                   Acting as our capstone event for the second semester, the{" "}
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     South Florida Economic Ransom Everglades Symposium
                   </span>{" "}
                   kicks off with a{" "}
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     Poster Board Gallery
                   </span>{" "}
                   where students present original research. This is followed by{" "}
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     Keynote Speakers
                   </span>{" "}
                   from students analyzing real world problems and presenting on
                   their proposed actionable solution. The event concludes with a{" "}
-                  <span className="italic text-[#C8A55C] font-heading">
+                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                     Guest Panel Discussion
                   </span>{" "}
                   featuring professionals debating economic trends, paths to

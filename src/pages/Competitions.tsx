@@ -49,7 +49,7 @@ export function Competitions() {
               <>
                 MVE organizes teams for regional and national challenges and
                 university-led invitationals such as the{" "}
-                <span className="italic text-[#C8A55C] font-heading">
+                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                   Wharton Investment Challenge
                 </span>
                 . Starting next semester, students undergo sessions to master

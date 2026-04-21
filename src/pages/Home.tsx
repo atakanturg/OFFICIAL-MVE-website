@@ -188,13 +188,13 @@ export function Home() {
                     description={
                       <>
                         Acting as our capstone event for the first semester, the{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Investment Summit
                         </span>{" "}
                         is a multi-round event.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Open Round
                         </span>
                         : Potential teams will submit applications in order to
@@ -203,7 +203,7 @@ export function Home() {
                         around 6-8 teams, each ranging from 1-4 people.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Qualifications Round
                         </span>
                         : Selected teams will be assigned a recognizable
@@ -212,7 +212,7 @@ export function Home() {
                         order to sway investors into buying their stock.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Finals
                         </span>
                         : Finalist teams will present in a live event in front
@@ -231,22 +231,22 @@ export function Home() {
                       <>
                         Acting as our capstone event for the second semester,
                         the{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           South Florida Economic Ransom Everglades Symposium
                         </span>{" "}
                         kicks off with a{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Poster Board Gallery
                         </span>{" "}
                         where students present original research. This is
                         followed by{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Keynote Speakers
                         </span>{" "}
                         from students analyzing real world problems and
                         presenting on their proposed actionable solution. The
                         event concludes with a{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Guest Panel Discussion
                         </span>{" "}
                         featuring professionals debating economic trends, paths
@@ -262,11 +262,11 @@ export function Home() {
                     title="REASON"
                     description={
                       <>
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           REASON
                         </span>{" "}
                         leverages the{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Ransom Everglades Alumni and Parent Network
                         </span>{" "}
                         and esteemed guests. In various breakout rooms, students
@@ -285,16 +285,16 @@ export function Home() {
                     description={
                       <>
                         The{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           MVE Fund
                         </span>{" "}
                         is a student-managed vehicle where participants perform
                         research and pitch investment theses to our{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Internal Board
                         </span>
                         . The{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           MVE Fund's
                         </span>{" "}
                         main goal is to create positive cash flow to sponsor our

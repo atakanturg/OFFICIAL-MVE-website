@@ -48,16 +48,16 @@ export function InvestmentChallenge() {
           description={
             <>
               The{" "}
-              <span className="italic text-[#C8A55C] font-heading">
+              <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                 MVE Fund
               </span>{" "}
               is a student-managed vehicle where participants perform research
               and pitch investment theses to our{" "}
-              <span className="italic text-[#C8A55C] font-heading">
+              <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                 Internal Board
               </span>
               . The{" "}
-              <span className="italic text-[#C8A55C] font-heading">
+              <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                 MVE Fund's
               </span>{" "}
               main goal is to create positive cash flow to sponsor our other
