@@ -13,7 +13,9 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       duration: 1.5,
       ease: "power2.inOut",
       onUpdate: () => setProgress(Math.floor(obj.value)),
-      onComplete: () => setTimeout(() => setShowLogo(true), 150),
+      onComplete: () => {
+        setTimeout(() => setShowLogo(true), 150);
+      },
     });
   }, []);
 

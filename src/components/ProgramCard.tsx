@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { motion } from "framer-motion";
 
 interface ProgramCardProps {
   title: string;
