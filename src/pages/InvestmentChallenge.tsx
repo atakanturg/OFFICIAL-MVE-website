@@ -22,7 +22,6 @@ export function InvestmentChallenge() {
           </Link>
         </motion.div>
 
-        <ScrollIndicator delay={0.5} />
 
         {/* Badge */}
         <motion.div

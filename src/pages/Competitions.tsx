@@ -24,7 +24,6 @@ export function Competitions() {
             </Link>
           </motion.div>
 
-          <ScrollIndicator delay={0.5} />
 
           <motion.div className="absolute top-24 z-20">
             <span className="text-[#C8A55C] text-xs font-bold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">

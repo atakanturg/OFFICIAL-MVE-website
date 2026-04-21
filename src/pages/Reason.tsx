@@ -131,7 +131,7 @@ export function Reason() {
                 Are you an alumni or parent interested in serving as an industry professional in our breakout sessions?
               </p>
               <Link
-                href="/contact"
+                href="/contact#contact"
                 className="px-8 py-3 bg-[#C8A55C] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#D4B56A] transition-colors"
               >
                 Get in Touch

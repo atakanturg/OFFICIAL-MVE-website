@@ -129,6 +129,7 @@ export function Contact() {
 
             {/* Email Contact Form */}
             <motion.div
+              id="contact"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
