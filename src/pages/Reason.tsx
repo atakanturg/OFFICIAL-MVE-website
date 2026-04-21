@@ -89,7 +89,7 @@ export function Reason() {
               variants={itemVariants}
               className="text-lg text-[#A0A0A0] leading-relaxed max-w-3xl mb-16 border-l-2 border-[#C8A55C]/30 pl-6"
             >
-              REASON is a case study driven workshop where we bring in professionals from the Ransom Everglades alumni and parent network. Students participate in structured breakout rooms, working through real business cases with industry mentors.
+              REASON is a case-study-driven workshop where we bring in professionals from the Ransom Everglades alumni and parent network. Students participate in structured breakout rooms, working through real business cases with industry mentors.
             </motion.p>
 
             <motion.div

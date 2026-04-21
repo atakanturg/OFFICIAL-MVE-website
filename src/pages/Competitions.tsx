@@ -50,7 +50,7 @@ export function Competitions() {
             className="flex flex-col items-center mt-12 px-6 text-center z-10 w-full"
           >
             <p className="text-xl md:text-2xl text-[#A0A0A0] leading-relaxed max-w-2xl border-l-2 border-[#C8A55C]/30 pl-6 mx-auto">
-              Registration for the economics teams of Ransom Everglades will begin to open <strong className="text-[#C8A55C] font-bold">RIGHT HERE</strong> starting in August 2026.
+              Registration for the Economics teams of Ransom Everglades will begin to open <strong className="text-[#C8A55C] font-bold">RIGHT HERE</strong> starting in August 2026.
             </p>
           </motion.div>
         </section>

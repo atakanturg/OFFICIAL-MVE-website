@@ -104,7 +104,7 @@ export function Sfere() {
               <motion.div variants={itemVariants} className="bg-[#111111] border border-white/[0.06] rounded-lg p-8 flex flex-col items-start gap-6 w-full">
                 <div>
                   <h3 className="text-[#F5F5F0] font-heading font-semibold text-2xl uppercase tracking-wide">Guest Panel</h3>
-                  <p className="text-sm text-[#A0A0A0] mt-2 max-w-2xl">Explore insights from global leaders and industry professional across previous symposium panels.</p>
+                  <p className="text-sm text-[#A0A0A0] mt-2 max-w-2xl">Explore insights from global leaders and industry professionals across previous symposium panels.</p>
                 </div>
                 <div className="flex flex-wrap gap-4 w-full mt-2">
                   {[

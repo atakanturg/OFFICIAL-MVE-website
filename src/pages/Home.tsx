@@ -150,7 +150,7 @@ export function Home() {
             <p className="text-2xl md:text-3xl font-heading text-[#F5F5F0]/80 leading-relaxed max-w-3xl">
               We drive <span className="text-[#C8A55C]">competitions</span>,{" "}
               <span className="text-[#C8A55C]">investing</span>, and{" "}
-              <span className="text-[#C8A55C]">consulting</span>{" "}
+              <span className="text-[#C8A55C]">consulting</span>,{" "}
               equipping students with the tools to think critically about
               markets and the economy.
             </p>
@@ -185,7 +185,7 @@ export function Home() {
                 <SectionReveal delay={0}>
                   <ProgramCard
                     title="Investment Summit"
-                    description="Student-Pitch competition with live judging and prize awards."
+                    description="Student pitch competition with live judging and prize awards."
                     href="/investment-summit"
                     status="WINTER 2027"
                   />
@@ -201,7 +201,7 @@ export function Home() {
                 <SectionReveal delay={0.2}>
                   <ProgramCard
                     title="REASON"
-                    description="Case study workshops with alumni and industry professional."
+                    description="Case study workshops with alumni and industry professionals."
                     href="/reason"
                     status="MAY 2026"
                   />
@@ -209,7 +209,7 @@ export function Home() {
                 <SectionReveal delay={0.3}>
                   <ProgramCard
                     title="MVE Fund"
-                    description="Student-managed investment challenge new for this year."
+                    description="Student-managed investment challenge, new for this year."
                     href="/investment-challenge"
                     status="Coming Soon"
                   />
@@ -217,7 +217,7 @@ export function Home() {
                 <SectionReveal delay={0.4}>
                   <ProgramCard
                     title="Economic Competitions"
-                    description="Registration for Ransom Everglades economics competition teams."
+                    description="Registration for Ransom Everglades Economics competition teams."
                     href="/competitions"
                     status="Coming Soon"
                   />
