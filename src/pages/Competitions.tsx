@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
-import { ScrollIndicator } from "../components/ScrollIndicator";
 import { ProgramDescription } from "../components/ProgramDescription";
 
 export function Competitions() {
