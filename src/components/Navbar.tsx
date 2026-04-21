@@ -56,7 +56,7 @@ export function Navbar() {
           <Link
             to={location === "/" ? "/" : "/#programs"}
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 text-[#C8A55C] font-heading font-bold text-lg tracking-[0.15em] hover:opacity-80 transition-opacity"
+            className="px-4 py-2 text-[#58C391] font-heading font-bold text-lg tracking-[0.15em] hover:opacity-80 transition-opacity"
           >
             MVE
           </Link>
@@ -65,7 +65,7 @@ export function Navbar() {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className="px-5 py-2 bg-[#C8A55C] text-[#0A0A0A] text-sm font-semibold tracking-wide rounded-full hover:bg-[#D4B56A] transition-colors"
+            className="px-5 py-2 bg-[#58C391] text-[#0A0A0A] text-sm font-semibold tracking-wide rounded-full hover:bg-[#76D3A5] transition-colors"
           >
             Contact
           </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block text-3xl md:text-5xl font-heading font-semibold tracking-wide py-2 px-4 transition-colors duration-200 ${
                       location === link.href
-                        ? "text-[#C8A55C]"
+                        ? "text-[#58C391]"
                         : "text-[#F5F5F0]/60 hover:text-[#F5F5F0]"
                     }`}
                   >
@@ -131,7 +131,7 @@ export function Navbar() {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="text-sm text-[#666666] hover:text-[#C8A55C] transition-colors tracking-widest uppercase font-medium"
+                  className="text-sm text-[#666666] hover:text-[#58C391] transition-colors tracking-widest uppercase font-medium"
                 >
                   Contact
                 </Link>

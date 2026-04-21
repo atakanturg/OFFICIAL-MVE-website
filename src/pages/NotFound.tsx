@@ -37,7 +37,7 @@ export function NotFound() {
           className="z-10"
         >
           <Link href="/">
-            <a className="inline-flex items-center gap-2 text-[#C8A55C] hover:text-[#D4B56A] font-medium transition-colors link-underline">
+            <a className="inline-flex items-center gap-2 text-[#58C391] hover:text-[#76D3A5] font-medium transition-colors link-underline">
               <span aria-hidden="true">&larr;</span> Back to Home
             </a>
           </Link>

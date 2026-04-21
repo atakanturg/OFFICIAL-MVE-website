@@ -19,14 +19,14 @@ export function TimelineRow({ milestone, date, isLast = false }: TimelineRowProp
     >
       {/* Left: date marker */}
       <div className="flex flex-col items-end pt-1 w-24 shrink-0 transition-transform duration-300 group-hover:translate-x-1">
-        <span className={`text-[10px] font-mono font-semibold tracking-[0.2em] uppercase ${isTBD ? "text-[#666666]" : "text-[#C8A55C]"}`}>
+        <span className={`text-[10px] font-mono font-semibold tracking-[0.2em] uppercase ${isTBD ? "text-[#666666]" : "text-[#58C391]"}`}>
           {date}
         </span>
       </div>
 
       {/* Right: text */}
       <div className="flex flex-col">
-        <span className="text-[#A0A0A0] font-semibold tracking-widest uppercase text-base group-hover:text-[#C8A55C] transition-colors duration-300">
+        <span className="text-[#A0A0A0] font-semibold tracking-widest uppercase text-base group-hover:text-[#58C391] transition-colors duration-300">
           {milestone}
         </span>
       </div>

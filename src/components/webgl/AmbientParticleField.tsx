@@ -71,7 +71,7 @@ export function AmbientParticleField() {
   return (
     <points ref={pointsRef} geometry={geometry}>
       <pointsMaterial
-        color="#C8A55C"
+        color="#58C391"
         size={0.08}
         transparent
         opacity={0.4}

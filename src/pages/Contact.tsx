@@ -54,7 +54,7 @@ export function Contact() {
     });
   };
 
-  const inputClasses = "w-full bg-[#111111] border border-white/[0.06] text-[#F5F5F0] px-4 py-3 text-sm rounded-lg focus:outline-none focus:border-[#C8A55C]/50 focus:ring-1 focus:ring-[#C8A55C]/20 transition-all placeholder:text-[#666666]/60";
+  const inputClasses = "w-full bg-[#111111] border border-white/[0.06] text-[#F5F5F0] px-4 py-3 text-sm rounded-lg focus:outline-none focus:border-[#58C391]/50 focus:ring-1 focus:ring-[#58C391]/20 transition-all placeholder:text-[#666666]/60";
 
   return (
     <PageTransition>
@@ -67,7 +67,7 @@ export function Contact() {
         >
           <Link
             href="/#programs"
-            className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
+            className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
           >
             <span>←</span> Home
           </Link>
@@ -83,9 +83,9 @@ export function Contact() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#C8A55C] uppercase mb-3">Leadership</h2>
+              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#58C391] uppercase mb-3">Leadership</h2>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#F5F5F0] tracking-tight uppercase">
-                Our <span className="italic text-[#C8A55C]">Team</span>
+                Our <span className="italic text-[#58C391]">Team</span>
               </h1>
               <p className="text-[#A0A0A0] text-sm mt-4 tracking-wide uppercase font-semibold">
                 Scroll down to reach out via our contact form below
@@ -147,7 +147,7 @@ export function Contact() {
                   <input type="hidden" name="to_email" value={toEmail} />
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="senderEmail" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">
+                    <label htmlFor="senderEmail" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">
                       Your Email
                     </label>
                     <input
@@ -163,7 +163,7 @@ export function Contact() {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="subject" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">
+                    <label htmlFor="subject" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">
                       Subject / Title
                     </label>
                     <input
@@ -179,7 +179,7 @@ export function Contact() {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="messageBody" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">
+                    <label htmlFor="messageBody" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">
                       Message
                     </label>
                     <textarea
@@ -197,7 +197,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="self-start inline-flex items-center gap-3 px-8 py-3 bg-[#C8A55C] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#D4B56A] transition-colors cursor-pointer disabled:opacity-50"
+                    className="self-start inline-flex items-center gap-3 px-8 py-3 bg-[#58C391] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#76D3A5] transition-colors cursor-pointer disabled:opacity-50"
                   >
                     {status === "sending" ? (
                       <>

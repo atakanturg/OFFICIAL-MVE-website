@@ -47,7 +47,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
             <div className="w-48 h-px bg-white/5 relative overflow-hidden rounded-full">
               <motion.div
                 className="absolute inset-y-0 left-0 rounded-full"
-                style={{ backgroundColor: '#C8A55C' }}
+                style={{ backgroundColor: '#58C391' }}
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
               />
@@ -66,7 +66,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
           >
             <h1
               className="text-5xl md:text-7xl font-bold tracking-[0.3em] font-heading"
-              style={{ color: '#C8A55C' }}
+              style={{ color: '#58C391' }}
             >
               {"MVE".split('').map((char, i) => (
                 <motion.span

@@ -19,7 +19,7 @@ export function ProgramDescription({
       {!showDescription ? (
         <button
           onClick={() => setShowDescription(true)}
-          className="text-xs font-heading italic text-[#A0A0A0] hover:text-[#C8A55C] underline underline-offset-4 transition-colors cursor-pointer tracking-widest uppercase"
+          className="text-xs font-heading italic text-[#A0A0A0] hover:text-[#58C391] underline underline-offset-4 transition-colors cursor-pointer tracking-widest uppercase"
         >
           Show Description
         </button>

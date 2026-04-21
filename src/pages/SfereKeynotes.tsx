@@ -65,7 +65,7 @@ export function SfereKeynotes() {
           className="absolute top-28 left-6 md:left-12 z-40"
         >
           <Link href="/sfere">
-            <a className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
+            <a className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
               <span>←</span> SFERE
             </a>
           </Link>
@@ -80,9 +80,9 @@ export function SfereKeynotes() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center mb-24 max-w-3xl"
             >
-              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#C8A55C] uppercase mb-3">{data.title}</h2>
+              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#58C391] uppercase mb-3">{data.title}</h2>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-[#F5F5F0] tracking-tight uppercase mb-6 leading-tight">
-                Keynote <span className="italic text-[#C8A55C]">Speakers</span>
+                Keynote <span className="italic text-[#58C391]">Speakers</span>
               </h1>
               <p className="text-lg text-[#A0A0A0] leading-relaxed">
                 {data.description}
@@ -110,8 +110,8 @@ export function SfereKeynotes() {
                     />
                   </div>
                   <div className="flex flex-col pt-1 text-center w-full">
-                    <h3 className="text-xl font-heading font-semibold text-[#F5F5F0] group-hover:text-[#C8A55C] tracking-wide mb-2 uppercase transition-colors">{speaker.name}</h3>
-                    <div className="w-8 h-px bg-[#C8A55C] mb-3 mx-auto transition-transform group-hover:scale-x-150 origin-center duration-300" />
+                    <h3 className="text-xl font-heading font-semibold text-[#F5F5F0] group-hover:text-[#58C391] tracking-wide mb-2 uppercase transition-colors">{speaker.name}</h3>
+                    <div className="w-8 h-px bg-[#58C391] mb-3 mx-auto transition-transform group-hover:scale-x-150 origin-center duration-300" />
                     <p className="text-sm text-[#A0A0A0] leading-relaxed">
                       {speaker.description}
                     </p>

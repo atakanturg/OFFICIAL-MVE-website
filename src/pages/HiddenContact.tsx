@@ -44,7 +44,7 @@ export function HiddenContact({ params }: { params: { id: string } }) {
       <div className="flex flex-col min-h-[50vh] items-center justify-center p-8">
         <h1 className="text-2xl text-[#F5F5F0] font-heading font-bold uppercase tracking-widest mb-4">Contact Not Found</h1>
         <Link href="/sfere/recent-keynotes">
-          <a className="text-[#C8A55C] hover:text-[#D4B56A] link-underline">Return to Keynotes</a>
+          <a className="text-[#58C391] hover:text-[#76D3A5] link-underline">Return to Keynotes</a>
         </Link>
       </div>
     );
@@ -77,7 +77,7 @@ export function HiddenContact({ params }: { params: { id: string } }) {
     });
   };
 
-  const inputClasses = "w-full bg-[#111111] border border-white/[0.06] text-[#F5F5F0] px-4 py-3 text-sm rounded-lg focus:outline-none focus:border-[#C8A55C]/50 focus:ring-1 focus:ring-[#C8A55C]/20 transition-all placeholder:text-[#666666]/60";
+  const inputClasses = "w-full bg-[#111111] border border-white/[0.06] text-[#F5F5F0] px-4 py-3 text-sm rounded-lg focus:outline-none focus:border-[#58C391]/50 focus:ring-1 focus:ring-[#58C391]/20 transition-all placeholder:text-[#666666]/60";
 
   return (
     <PageTransition>
@@ -88,7 +88,7 @@ export function HiddenContact({ params }: { params: { id: string } }) {
           className="absolute top-28 left-6 md:left-12 z-40"
         >
           <Link href="/sfere/recent-keynotes">
-            <a className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
+            <a className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
               <span>←</span> Back to Keynotes
             </a>
           </Link>
@@ -104,7 +104,7 @@ export function HiddenContact({ params }: { params: { id: string } }) {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#C8A55C] uppercase mb-3">SFERE Presenter</h2>
+              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#58C391] uppercase mb-3">SFERE Presenter</h2>
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-[#F5F5F0] tracking-tight uppercase break-words">
                 Contact {config.name}
               </h1>
@@ -124,18 +124,18 @@ export function HiddenContact({ params }: { params: { id: string } }) {
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="senderEmail" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">Your Email</label>
+                    <label htmlFor="senderEmail" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">Your Email</label>
                     <input id="senderEmail" name="reply_to" type="email" required value={senderEmail} onChange={(e) => setSenderEmail(e.target.value)} placeholder="you@example.com" className={inputClasses} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="subject" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">Subject / Title</label>
+                    <label htmlFor="subject" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">Subject / Title</label>
                     <input id="subject" name="subject" type="text" required value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Message Title" className={inputClasses} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="messageBody" className="text-xs font-semibold tracking-[0.2em] text-[#C8A55C] uppercase">Message</label>
+                    <label htmlFor="messageBody" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">Message</label>
                     <textarea id="messageBody" name="message" required value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Write your message here..." rows={6} className={`${inputClasses} resize-none`} />
                   </div>
-                  <button type="submit" disabled={status === "sending"} className="self-start inline-flex items-center gap-3 px-8 py-3 bg-[#C8A55C] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#D4B56A] transition-colors cursor-pointer disabled:opacity-50">
+                  <button type="submit" disabled={status === "sending"} className="self-start inline-flex items-center gap-3 px-8 py-3 bg-[#58C391] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#76D3A5] transition-colors cursor-pointer disabled:opacity-50">
                     {status === "sending" ? (<><div className="h-4 w-4 border-2 border-[#0A0A0A] border-t-transparent rounded-full animate-spin" /> Sending...</>) :
                      status === "sent" ? (<><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Message Sent</>) :
                      status === "error" ? (<><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Error Sending</>) :

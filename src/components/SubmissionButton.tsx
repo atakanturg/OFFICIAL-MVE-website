@@ -12,14 +12,14 @@ export function SubmissionButton({ label, url, variant, isNext = false }: Submis
   let classes = "";
 
   if (isNext) {
-    classes = "text-[#C8A55C] hover:pl-4";
+    classes = "text-[#58C391] hover:pl-4";
   } else if (isDisabled) {
     classes = "text-[#666666]/30 cursor-not-allowed";
   } else {
     if (variant === "solid") {
-      classes = "text-[#C8A55C] hover:pl-4 cursor-pointer";
+      classes = "text-[#58C391] hover:pl-4 cursor-pointer";
     } else if (variant === "outline") {
-      classes = "text-[#C8A55C]/80 hover:text-[#C8A55C] hover:pl-4 cursor-pointer";
+      classes = "text-[#58C391]/80 hover:text-[#58C391] hover:pl-4 cursor-pointer";
     } else {
       classes = "text-[#A0A0A0] hover:text-[#F5F5F0] hover:pl-4 cursor-pointer";
     }

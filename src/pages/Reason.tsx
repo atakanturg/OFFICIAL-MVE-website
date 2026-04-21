@@ -46,7 +46,7 @@ export function Reason() {
         >
           <Link
             href="/#programs"
-            className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
+            className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
           >
             <span>←</span> Home
           </Link>
@@ -61,7 +61,7 @@ export function Reason() {
           <motion.div style={{ opacity: headerBgOpacity }} className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-white/[0.04]" />
 
           <motion.div style={{ scale, y }} className="relative z-10 flex flex-col items-center origin-top w-full">
-            <h1 className="font-heading font-bold text-[clamp(2.5rem,13vw,6.5rem)] leading-none tracking-[0.1em] text-[#C8A55C] uppercase ml-[0.05em]">
+            <h1 className="font-heading font-bold text-[clamp(2.5rem,13vw,6.5rem)] leading-none tracking-[0.1em] text-[#58C391] uppercase ml-[0.05em]">
               REASON
             </h1>
             <motion.h2
@@ -78,7 +78,7 @@ export function Reason() {
           <div className="max-w-5xl mx-auto px-6 md:px-12">
 
             <div className="mb-12">
-              <span className="text-[#C8A55C] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">
+              <span className="text-[#58C391] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#58C391]/30 pb-1">
                 MAY 2026
               </span>
             </div>
@@ -86,11 +86,11 @@ export function Reason() {
             <ProgramDescription
               description={
                 <>
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     REASON
                   </span>{" "}
                   leverages the{" "}
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     Ransom Everglades Alumni and Parent Network
                   </span>{" "}
                   and esteemed guests. In various breakout rooms, students will
@@ -132,7 +132,7 @@ export function Reason() {
               </p>
               <Link
                 href="/contact#contact"
-                className="px-8 py-3 bg-[#C8A55C] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#D4B56A] transition-colors"
+                className="px-8 py-3 bg-[#58C391] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#76D3A5] transition-colors"
               >
                 Get in Touch
               </Link>

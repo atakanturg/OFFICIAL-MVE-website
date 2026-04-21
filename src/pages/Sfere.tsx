@@ -47,7 +47,7 @@ export function Sfere() {
         >
           <Link
             href="/#programs"
-            className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
+            className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
           >
             <span>←</span> Home
           </Link>
@@ -62,7 +62,7 @@ export function Sfere() {
           <motion.div style={{ opacity: headerBgOpacity }} className="absolute inset-0 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-white/[0.04]" />
 
           <motion.div style={{ scale, y }} className="relative z-10 flex flex-col items-center origin-top w-full">
-            <h1 className="font-heading font-bold text-[clamp(3rem,15vw,9rem)] leading-none tracking-[0.1em] text-[#C8A55C] uppercase ml-[0.05em]">
+            <h1 className="font-heading font-bold text-[clamp(3rem,15vw,9rem)] leading-none tracking-[0.1em] text-[#58C391] uppercase ml-[0.05em]">
               SFERE
             </h1>
             <motion.h2
@@ -79,7 +79,7 @@ export function Sfere() {
           <div className="max-w-5xl mx-auto px-6 md:px-12">
 
             <div className="mb-12">
-              <span className="text-[#C8A55C] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">
+              <span className="text-[#58C391] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#58C391]/30 pb-1">
                 SPRING 2027
               </span>
             </div>
@@ -88,20 +88,20 @@ export function Sfere() {
               description={
                 <>
                   Acting as our capstone event for the second semester, the{" "}
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     South Florida Economic Ransom Everglades Symposium
                   </span>{" "}
                   kicks off with a{" "}
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     Poster Board Gallery
                   </span>{" "}
                   where students present original research. This is followed by{" "}
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     Keynote Speakers
                   </span>{" "}
                   from students analyzing real world problems and presenting on
                   their proposed actionable solution. The event concludes with a{" "}
-                  <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                  <span className="italic text-[#58C391] font-heading font-bold text-base">
                     Guest Panel Discussion
                   </span>{" "}
                   featuring professionals debating economic trends, paths to
@@ -133,7 +133,7 @@ export function Sfere() {
                     <Link
                       key={year}
                       href={href}
-                      className="px-5 py-2 border border-[#C8A55C]/30 text-[#C8A55C] rounded-full text-sm font-semibold tracking-wider uppercase hover:bg-[#C8A55C]/10 transition-colors"
+                      className="px-5 py-2 border border-[#58C391]/30 text-[#58C391] rounded-full text-sm font-semibold tracking-wider uppercase hover:bg-[#58C391]/10 transition-colors"
                     >
                       {year} Panelists
                     </Link>
@@ -152,7 +152,7 @@ export function Sfere() {
                   <h3 className="text-[#F5F5F0] font-heading font-semibold text-xl uppercase tracking-wide">Keynote Speakers</h3>
                   <Link
                     href="/sfere/recent-keynotes"
-                    className="mt-6 text-[#C8A55C] font-semibold tracking-widest uppercase text-sm hover:text-[#D4B56A] transition-colors inline-flex items-center gap-2"
+                    className="mt-6 text-[#58C391] font-semibold tracking-widest uppercase text-sm hover:text-[#76D3A5] transition-colors inline-flex items-center gap-2"
                   >
                     Recent presentations <span className="text-lg">→</span>
                   </Link>

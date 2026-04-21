@@ -25,7 +25,7 @@ export function InvestmentSummit() {
         >
           <Link
             href="/#programs"
-            className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
+            className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline"
           >
             <span>←</span> Home
           </Link>
@@ -40,7 +40,7 @@ export function InvestmentSummit() {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <span className="text-[#C8A55C] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">
+          <span className="text-[#58C391] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#58C391]/30 pb-1">
             WINTER 2027
           </span>
         </motion.div>
@@ -54,19 +54,19 @@ export function InvestmentSummit() {
         >
           <h1 className="font-heading font-bold text-[clamp(2rem,8vw,5rem)] leading-[0.95] tracking-[-0.02em] text-[#F5F5F0] uppercase mb-6">
             Investment{" "}
-            <span className="italic text-[#C8A55C]">Summit</span>
+            <span className="italic text-[#58C391]">Summit</span>
           </h1>
           <ProgramDescription
             description={
               <>
                 Acting as our capstone event for the first semester, the{" "}
-                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                <span className="italic text-[#58C391] font-heading font-bold text-base">
                   Investment Summit
                 </span>{" "}
                 is a multi-round event.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                <span className="italic text-[#58C391] font-heading font-bold text-base">
                   Open Round
                 </span>
                 : Potential teams will submit applications in order to prove
@@ -75,7 +75,7 @@ export function InvestmentSummit() {
                 ranging from 1-4 people.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                <span className="italic text-[#58C391] font-heading font-bold text-base">
                   Qualifications Round
                 </span>
                 : Selected teams will be assigned a recognizable company (under
@@ -84,7 +84,7 @@ export function InvestmentSummit() {
                 buying their stock.
                 <br />
                 <br />
-                <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                <span className="italic text-[#58C391] font-heading font-bold text-base">
                   Finals
                 </span>
                 : Finalist teams will present in a live event in front of
@@ -105,7 +105,7 @@ export function InvestmentSummit() {
             </p>
             <Link
               href="/investment-summit/details"
-              className="inline-flex items-center gap-3 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-5 transition-all"
+              className="inline-flex items-center gap-3 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-5 transition-all"
             >
               Event Details <span className="text-base">→</span>
             </Link>
@@ -121,7 +121,7 @@ export function InvestmentSummit() {
         >
           {/* Timeline */}
           <section>
-            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
+            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#58C391] mb-10 flex items-center gap-3">
               Timeline
             </h2>
             <motion.div
@@ -139,7 +139,7 @@ export function InvestmentSummit() {
 
           {/* Submissions */}
           <section>
-            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
+            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#58C391] mb-10 flex items-center gap-3">
               Submissions
             </h2>
             <motion.div
@@ -154,7 +154,7 @@ export function InvestmentSummit() {
               <SubmissionButton label="Voting Procedure" url={config.submissionUrls.voting} variant="neutral" />
             </motion.div>
             {(!config.submissionUrls.opens || !config.submissionUrls.qualifiers || !config.submissionUrls.finalists) && (
-              <p className="mt-5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#C8A55C]/30 pl-3">
+              <p className="mt-5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#58C391]/30 pl-3">
                 Links activate as rounds open.
               </p>
             )}

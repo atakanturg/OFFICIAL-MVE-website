@@ -9,7 +9,7 @@ export function FinalistCard({ teamName }: { teamName: string }) {
       }}
       className="flex flex-col items-start gap-1 p-2"
     >
-      <span className="text-[10px] tracking-[0.2em] font-semibold text-[#C8A55C] uppercase">
+      <span className="text-[10px] tracking-[0.2em] font-semibold text-[#58C391] uppercase">
         Finalist
       </span>
       <h3 className="text-xl font-heading font-semibold text-[#F5F5F0]">{teamName}</h3>

@@ -78,7 +78,7 @@ export function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-xs font-semibold tracking-[0.4em] uppercase text-[#C8A55C] mb-8"
+            className="text-xs font-semibold tracking-[0.4em] uppercase text-[#58C391] mb-8"
           >
             Miami Venturing Entrepreneurs
           </motion.p>
@@ -86,7 +86,7 @@ export function Home() {
           {/* Main Heading */}
           <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] font-heading font-bold leading-[0.95] tracking-[-0.02em] text-[#F5F5F0] mb-10">
             Competitions.<br />
-            <span className="italic text-[#C8A55C]">Student-Led.</span><br />
+            <span className="italic text-[#58C391]">Student-Led.</span><br />
             Financial Thinking.
           </h1>
 
@@ -115,14 +115,14 @@ export function Home() {
                 className="text-btn group/btn hover:text-[#E03E3E] transition-colors"
               >
                 Investment Summit
-                <span className="text-xl transition-all duration-300 text-[#C8A55C] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
+                <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
               </Link>
               <Link
                 to="/sfere"
                 className="text-btn group/btn hover:text-[#E03E3E] transition-colors"
               >
                 SFERE Symposium
-                <span className="text-xl transition-all duration-300 text-[#C8A55C] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
+                <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
               </Link>
             </div>
           </motion.div>
@@ -148,9 +148,9 @@ export function Home() {
 
           <SectionReveal delay={0.2} className="mt-32 mb-32">
             <p className="text-2xl md:text-3xl font-heading text-[#F5F5F0]/80 leading-relaxed max-w-3xl">
-              We drive <span className="text-[#C8A55C]">competitions</span>,{" "}
-              <span className="text-[#C8A55C]">investing</span>, and{" "}
-              <span className="text-[#C8A55C]">consulting</span>,{" "}
+              We drive <span className="text-[#58C391]">competitions</span>,{" "}
+              <span className="text-[#58C391]">investing</span>, and{" "}
+              <span className="text-[#58C391]">consulting</span>,{" "}
               equipping students with the tools to think critically about
               markets and the economy.
             </p>
@@ -171,7 +171,7 @@ export function Home() {
       <section className="content-section">
         <div className="max-w-6xl mx-auto">
           <SectionReveal>
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-[#C8A55C] mb-4">
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-[#58C391] mb-4">
               What We Do
             </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-[#F5F5F0] mb-12">
@@ -188,13 +188,13 @@ export function Home() {
                     description={
                       <>
                         Acting as our capstone event for the first semester, the{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Investment Summit
                         </span>{" "}
                         is a multi-round event.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Open Round
                         </span>
                         : Potential teams will submit applications in order to
@@ -203,7 +203,7 @@ export function Home() {
                         around 6-8 teams, each ranging from 1-4 people.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Qualifications Round
                         </span>
                         : Selected teams will be assigned a recognizable
@@ -212,7 +212,7 @@ export function Home() {
                         order to sway investors into buying their stock.
                         <br />
                         <br />
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Finals
                         </span>
                         : Finalist teams will present in a live event in front
@@ -231,22 +231,22 @@ export function Home() {
                       <>
                         Acting as our capstone event for the second semester,
                         the{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           South Florida Economic Ransom Everglades Symposium
                         </span>{" "}
                         kicks off with a{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Poster Board Gallery
                         </span>{" "}
                         where students present original research. This is
                         followed by{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Keynote Speakers
                         </span>{" "}
                         from students analyzing real world problems and
                         presenting on their proposed actionable solution. The
                         event concludes with a{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Guest Panel Discussion
                         </span>{" "}
                         featuring professionals debating economic trends, paths
@@ -262,11 +262,11 @@ export function Home() {
                     title="REASON"
                     description={
                       <>
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           REASON
                         </span>{" "}
                         leverages the{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Ransom Everglades Alumni and Parent Network
                         </span>{" "}
                         and esteemed guests. In various breakout rooms, students
@@ -285,16 +285,16 @@ export function Home() {
                     description={
                       <>
                         The{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           MVE Fund
                         </span>{" "}
                         is a student-managed vehicle where participants perform
                         research and pitch investment theses to our{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Internal Board
                         </span>
                         . The{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           MVE Fund's
                         </span>{" "}
                         main goal is to create positive cash flow to sponsor our
@@ -312,7 +312,7 @@ export function Home() {
                       <>
                         MVE organizes teams for regional and national challenges
                         and university-led invitationals such as the{" "}
-                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
+                        <span className="italic text-[#58C391] font-heading font-bold text-base">
                           Wharton Investment Challenge
                         </span>
                         . Starting next semester, students undergo sessions to
@@ -338,7 +338,7 @@ export function Home() {
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
           <SectionReveal>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[#F5F5F0] leading-tight mb-8">
-              Join the <span className="italic text-[#C8A55C] font-heading font-bold">MVE</span> Community
+              Join the <span className="italic text-[#58C391] font-heading font-bold">MVE</span> Community
             </h2>
             <p className="text-lg text-[#A0A0A0] mb-12 max-w-2xl mx-auto">
               Get involved with our competitions, investing programs, and economic discourse events taking place locally at Ransom Everglades.

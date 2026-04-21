@@ -61,7 +61,7 @@ export function SfereRecentKeynotes() {
           className="absolute top-28 left-6 md:left-12 z-40"
         >
           <Link href="/sfere">
-            <a className="inline-flex items-center gap-2 text-[#C8A55C] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
+            <a className="inline-flex items-center gap-2 text-[#58C391] font-semibold text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all link-underline">
               <span>←</span> SFERE
             </a>
           </Link>
@@ -76,9 +76,9 @@ export function SfereRecentKeynotes() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center mb-20 max-w-3xl"
             >
-              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#C8A55C] uppercase mb-3">Highlighted Students</h2>
+              <h2 className="text-xs font-semibold tracking-[0.3em] text-[#58C391] uppercase mb-3">Highlighted Students</h2>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-[#F5F5F0] tracking-tight uppercase mb-6 leading-tight">
-                Recent <span className="italic text-[#C8A55C]">Presentations</span>
+                Recent <span className="italic text-[#58C391]">Presentations</span>
               </h1>
               <p className="text-lg text-[#A0A0A0] leading-relaxed">
                 Explore the innovative research, technological solutions, and entrepreneurial ventures presented by our distinguished student keynote speakers.
@@ -96,21 +96,21 @@ export function SfereRecentKeynotes() {
                   key={idx}
                   custom={idx}
                   variants={itemVariants}
-                  className="flex flex-col bg-[#111111] border border-white/[0.06] rounded-lg p-8 md:p-10 group hover:border-[#C8A55C]/20 transition-all"
+                  className="flex flex-col bg-[#111111] border border-white/[0.06] rounded-lg p-8 md:p-10 group hover:border-[#58C391]/20 transition-all"
                 >
                   <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4 gap-2 border-b border-white/[0.04] pb-4">
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-[#F5F5F0] group-hover:text-[#C8A55C] tracking-wide uppercase transition-colors">{pres.names}</h3>
-                    <span className="text-[#C8A55C] font-mono text-xs tracking-widest uppercase shrink-0">{pres.classYear}</span>
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-[#F5F5F0] group-hover:text-[#58C391] tracking-wide uppercase transition-colors">{pres.names}</h3>
+                    <span className="text-[#58C391] font-mono text-xs tracking-widest uppercase shrink-0">{pres.classYear}</span>
                   </div>
 
-                  <h4 className="text-lg font-heading font-semibold text-[#A0A0A0] group-hover:text-[#C8A55C] mb-4 uppercase tracking-wide transition-colors">{pres.title}</h4>
+                  <h4 className="text-lg font-heading font-semibold text-[#A0A0A0] group-hover:text-[#58C391] mb-4 uppercase tracking-wide transition-colors">{pres.title}</h4>
                   <p className="text-sm text-[#A0A0A0] leading-relaxed mb-6 grow">
                     {pres.description}
                   </p>
 
                   <div className="flex flex-wrap gap-3 mt-auto border-t border-white/[0.04] pt-5 relative z-50">
                     <Link href={`/contact/keynotes/${pres.id}`}>
-                      <a className="inline-flex items-center gap-3 px-6 py-2 border border-[#C8A55C]/30 text-[#C8A55C] rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-[#C8A55C]/10 transition-colors cursor-pointer">
+                      <a className="inline-flex items-center gap-3 px-6 py-2 border border-[#58C391]/30 text-[#58C391] rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-[#58C391]/10 transition-colors cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                         Contact Presenter{pres.id === "freshmen" ? "s" : ""}
                       </a>
