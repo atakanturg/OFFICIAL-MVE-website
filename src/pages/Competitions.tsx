@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 export function Competitions() {
   return (
@@ -21,6 +22,8 @@ export function Competitions() {
               <span>←</span> Home
             </Link>
           </motion.div>
+
+          <ScrollIndicator delay={0.5} />
 
           <motion.div className="absolute top-24 z-20">
             <span className="text-[#C8A55C] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useParams } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 const yearData: Record<string, { title: string; description: string; speakers: { name: string; description: string; image: string; objectPosition?: string }[] }> = {
   "2026": {
@@ -69,6 +70,8 @@ export function SfereKeynotes() {
             </a>
           </Link>
         </motion.div>
+
+        <ScrollIndicator delay={0.5} />
 
         <section className="pt-40 pb-20 px-6 md:px-12 flex flex-col justify-center w-full">
           <div className="mx-auto max-w-7xl w-full flex flex-col items-center">

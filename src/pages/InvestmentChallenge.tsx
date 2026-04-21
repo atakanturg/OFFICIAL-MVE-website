@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 export function InvestmentChallenge() {
   return (
@@ -19,6 +20,8 @@ export function InvestmentChallenge() {
             <span>←</span> Home
           </Link>
         </motion.div>
+
+        <ScrollIndicator delay={0.5} />
 
         {/* Badge */}
         <motion.div

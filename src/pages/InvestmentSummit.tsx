@@ -4,6 +4,7 @@ import { config } from "../config";
 import { TimelineRow } from "../components/TimelineRow";
 import { SubmissionButton } from "../components/SubmissionButton";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 export function InvestmentSummit() {
   const containerVariants = {
@@ -28,6 +29,8 @@ export function InvestmentSummit() {
             <span>←</span> Home
           </Link>
         </motion.div>
+
+        <ScrollIndicator delay={0.5} />
 
         {/* Badge */}
         <motion.div

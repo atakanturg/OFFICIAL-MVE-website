@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 export function Sfere() {
   const containerVariants = {
@@ -50,6 +51,8 @@ export function Sfere() {
             <span>←</span> Home
           </Link>
         </motion.div>
+
+        <ScrollIndicator delay={0.5} />
 
         <div className="w-full h-screen pointer-events-none" />
 

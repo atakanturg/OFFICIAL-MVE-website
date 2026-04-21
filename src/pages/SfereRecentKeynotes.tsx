@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 const presentations = [
   {
@@ -65,6 +66,8 @@ export function SfereRecentKeynotes() {
             </a>
           </Link>
         </motion.div>
+
+        <ScrollIndicator delay={0.5} />
 
         <section className="pt-40 pb-20 px-6 md:px-12 flex flex-col justify-center w-full">
           <div className="mx-auto max-w-5xl w-full flex flex-col items-center">

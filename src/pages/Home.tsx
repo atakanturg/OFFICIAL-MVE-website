@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionReveal } from "../components/SectionReveal";
 import { ProgramCard } from "../components/ProgramCard";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,24 +71,7 @@ export function Home() {
           className="text-center max-w-5xl mx-auto flex flex-col items-center justify-center w-full"
         >
         {/* Scroll Indicator (Top) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute top-12 left-1/2 -translate-x-1/2 z-20"
-        >
-          <div className="flex flex-col items-center gap-1.5 opacity-50">
-            <span className="text-[9px] tracking-[0.4em] uppercase text-[#666666] font-bold">Explore</span>
-            <svg width="10" height="16" viewBox="0 0 16 24" fill="none" className="text-[#666666]">
-              <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" strokeWidth="2" />
-              <motion.circle
-                cx="8" cy="8" r="2" fill="currentColor"
-                animate={{ cy: [8, 16, 8] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </svg>
-          </div>
-        </motion.div>
+        <ScrollIndicator delay={1.5} />
 
           {/* Pre-heading */}
           <motion.p
