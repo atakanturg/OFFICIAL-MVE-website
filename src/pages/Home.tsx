@@ -166,7 +166,7 @@ export function Home() {
             <p className="text-2xl md:text-3xl font-heading text-[#F5F5F0]/80 leading-relaxed max-w-3xl">
               We drive <span className="text-[#C8A55C]">competitions</span>,{" "}
               <span className="text-[#C8A55C]">investing</span>, and{" "}
-              <span className="text-[#C8A55C]">consulting</span>
+              <span className="text-[#C8A55C]">consulting</span>{" "}
               equipping students with the tools to think critically about
               markets and the economy.
             </p>
