@@ -51,13 +51,15 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
                       key={c.id}
                       initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
                       animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                      exit={{ opacity: 0, filter: "blur(4px)", width: 0, margin: 0, padding: 0 }}
+                      exit={{ 
+                        opacity: 0, filter: "blur(4px)", width: 0, margin: 0, padding: 0,
+                        transition: { duration: 0.5, ease: "easeInOut" }
+                      }}
                       transition={{
                         opacity: { delay: phase === 'typing' ? i * 0.04 : 0, duration: 0.3 },
                         filter: { delay: phase === 'typing' ? i * 0.04 : 0, duration: 0.3 },
                         y: { delay: phase === 'typing' ? i * 0.04 : 0, duration: 0.3 },
-                        layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                        exit: { duration: 0.5, ease: "easeInOut" }
+                        layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
                       }}
                       className={`inline-flex items-center justify-center overflow-hidden text-xs md:text-sm lg:text-base font-mono tracking-widest text-[#58C391] uppercase whitespace-pre ${c.isSpace ? 'w-2 md:w-3' : ''}`}
                     >
