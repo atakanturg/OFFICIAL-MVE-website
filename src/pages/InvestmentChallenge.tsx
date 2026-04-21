@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { ProgramDescription } from "../components/ProgramDescription";
 
 export function InvestmentChallenge() {
   return (
@@ -43,14 +44,28 @@ export function InvestmentChallenge() {
           Investment <span className="italic text-[#C8A55C]">Challenge</span>
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-lg md:text-xl text-[#A0A0A0] leading-relaxed max-w-2xl mb-12"
-        >
-          The MVE Fund is a new MVE program launching this year. More details will be announced soon.
-        </motion.p>
+        <ProgramDescription
+          description={
+            <>
+              The{" "}
+              <span className="italic text-[#C8A55C] font-heading">
+                MVE Fund
+              </span>{" "}
+              is a student-managed vehicle where participants perform research
+              and pitch investment theses to our{" "}
+              <span className="italic text-[#C8A55C] font-heading">
+                Internal Board
+              </span>
+              . The{" "}
+              <span className="italic text-[#C8A55C] font-heading">
+                MVE Fund's
+              </span>{" "}
+              main goal is to create positive cash flow to sponsor our other
+              events through good trading.
+            </>
+          }
+          className="mb-12"
+        />
       </div>
     </PageTransition>
   );

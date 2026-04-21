@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { ProgramDescription } from "../components/ProgramDescription";
 
 export function Reason() {
   const containerVariants = {
@@ -82,15 +83,24 @@ export function Reason() {
               </span>
             </div>
 
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={itemVariants}
-              className="text-lg text-[#A0A0A0] leading-relaxed max-w-3xl mb-16 border-l-2 border-[#C8A55C]/30 pl-6"
-            >
-              REASON is a case-study-driven workshop where we bring in professionals from the Ransom Everglades alumni and parent network. Students participate in structured breakout rooms, working through real business cases with industry mentors.
-            </motion.p>
+            <ProgramDescription
+              description={
+                <>
+                  <span className="italic text-[#C8A55C] font-heading">
+                    REASON
+                  </span>{" "}
+                  leverages the{" "}
+                  <span className="italic text-[#C8A55C] font-heading">
+                    Ransom Everglades Alumni and Parent Network
+                  </span>{" "}
+                  and esteemed guests. In various breakout rooms, students will
+                  participate in case study workshops led by industry
+                  professionals, listen to presentations, or have detailed Q&A
+                  sessions, or a combination of all three.
+                </>
+              }
+              className="mb-16 pb-8 border-b border-white/[0.05]"
+            />
 
             <motion.div
               variants={containerVariants}

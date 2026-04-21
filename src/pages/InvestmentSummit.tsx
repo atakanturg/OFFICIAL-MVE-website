@@ -5,6 +5,7 @@ import { TimelineRow } from "../components/TimelineRow";
 import { SubmissionButton } from "../components/SubmissionButton";
 import { PageTransition } from "../components/PageTransition";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { ProgramDescription } from "../components/ProgramDescription";
 
 export function InvestmentSummit() {
   const containerVariants = {
@@ -55,6 +56,44 @@ export function InvestmentSummit() {
             Investment{" "}
             <span className="italic text-[#C8A55C]">Summit</span>
           </h1>
+          <ProgramDescription
+            description={
+              <>
+                Acting as our capstone event for the first semester, the{" "}
+                <span className="italic text-[#C8A55C] font-heading">
+                  Investment Summit
+                </span>{" "}
+                is a multi-round event.
+                <br />
+                <br />
+                <span className="italic text-[#C8A55C] font-heading">
+                  Open Round
+                </span>
+                : Potential teams will submit applications in order to prove
+                their general knowledge and diligence throughout the rest of the
+                process. We eliminate until there are around 6-8 teams, each
+                ranging from 1-4 people.
+                <br />
+                <br />
+                <span className="italic text-[#C8A55C] font-heading">
+                  Qualifications Round
+                </span>
+                : Selected teams will be assigned a recognizable company (under
+                fake names). Teams will be tasked with researching these case
+                studies and preparing a pitch in order to sway investors into
+                buying their stock.
+                <br />
+                <br />
+                <span className="italic text-[#C8A55C] font-heading">
+                  Finals
+                </span>
+                : Finalist teams will present in a live event in front of
+                students and industry professionals. Judging is based on student
+                votes and guest judges.
+              </>
+            }
+            className="mb-8"
+          />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

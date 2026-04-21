@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { ProgramDescription } from "../components/ProgramDescription";
 
 export function Competitions() {
   return (
@@ -43,16 +44,21 @@ export function Competitions() {
             </h1>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col items-center mt-12 px-6 text-center z-10 w-full"
-          >
-            <p className="text-xl md:text-2xl text-[#A0A0A0] leading-relaxed max-w-2xl border-l-2 border-[#C8A55C]/30 pl-6 mx-auto">
-              Registration for the Economics teams of Ransom Everglades will begin to open <strong className="text-[#C8A55C] font-bold">RIGHT HERE</strong> starting in August 2026.
-            </p>
-          </motion.div>
+          <ProgramDescription
+            description={
+              <>
+                MVE organizes teams for regional and national challenges and
+                university-led invitationals such as the{" "}
+                <span className="italic text-[#C8A55C] font-heading">
+                  Wharton Investment Challenge
+                </span>
+                . Starting next semester, students undergo sessions to master
+                economic principles and strategic thinking before starting
+                competitions, to foster good practice and ensure success.
+              </>
+            }
+            className="mt-8"
+          />
         </section>
       </div>
     </PageTransition>

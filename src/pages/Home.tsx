@@ -185,7 +185,41 @@ export function Home() {
                 <SectionReveal delay={0}>
                   <ProgramCard
                     title="Investment Summit"
-                    description="Student pitch competition with live judging and prize awards."
+                    description={
+                      <>
+                        Acting as our capstone event for the first semester, the{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Investment Summit
+                        </span>{" "}
+                        is a multi-round event.
+                        <br />
+                        <br />
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Open Round
+                        </span>
+                        : Potential teams will submit applications in order to
+                        prove their general knowledge and diligence throughout
+                        the rest of the process. We eliminate until there are
+                        around 6-8 teams, each ranging from 1-4 people.
+                        <br />
+                        <br />
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Qualifications Round
+                        </span>
+                        : Selected teams will be assigned a recognizable
+                        company (under fake names). Teams will be tasked with
+                        researching these case studies and preparing a pitch in
+                        order to sway investors into buying their stock.
+                        <br />
+                        <br />
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Finals
+                        </span>
+                        : Finalist teams will present in a live event in front
+                        of students and industry professionals. Judging is based
+                        on student votes and guest judges.
+                      </>
+                    }
                     href="/investment-summit"
                     status="WINTER 2027"
                   />
@@ -193,7 +227,32 @@ export function Home() {
                 <SectionReveal delay={0.1}>
                   <ProgramCard
                     title="SFERE Symposium"
-                    description="Economic symposium featuring keynote speakers and presentations."
+                    description={
+                      <>
+                        Acting as our capstone event for the second semester,
+                        the{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          South Florida Economic Ransom Everglades Symposium
+                        </span>{" "}
+                        kicks off with a{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Poster Board Gallery
+                        </span>{" "}
+                        where students present original research. This is
+                        followed by{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Keynote Speakers
+                        </span>{" "}
+                        from students analyzing real world problems and
+                        presenting on their proposed actionable solution. The
+                        event concludes with a{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Guest Panel Discussion
+                        </span>{" "}
+                        featuring professionals debating economic trends, paths
+                        to success, etc.
+                      </>
+                    }
                     href="/sfere"
                     status="SPRING 2027"
                   />
@@ -201,7 +260,21 @@ export function Home() {
                 <SectionReveal delay={0.2}>
                   <ProgramCard
                     title="REASON"
-                    description="Case study workshops with alumni and industry professionals."
+                    description={
+                      <>
+                        <span className="italic text-[#C8A55C] font-heading">
+                          REASON
+                        </span>{" "}
+                        leverages the{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Ransom Everglades Alumni and Parent Network
+                        </span>{" "}
+                        and esteemed guests. In various breakout rooms, students
+                        will participate in case study workshops led by industry
+                        professionals, listen to presentations, or have detailed
+                        Q&A sessions, or a combination of all three.
+                      </>
+                    }
                     href="/reason"
                     status="MAY 2026"
                   />
@@ -209,7 +282,25 @@ export function Home() {
                 <SectionReveal delay={0.3}>
                   <ProgramCard
                     title="MVE Fund"
-                    description="Student-managed investment challenge, new for this year."
+                    description={
+                      <>
+                        The{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          MVE Fund
+                        </span>{" "}
+                        is a student-managed vehicle where participants perform
+                        research and pitch investment theses to our{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Internal Board
+                        </span>
+                        . The{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          MVE Fund's
+                        </span>{" "}
+                        main goal is to create positive cash flow to sponsor our
+                        other events through good trading.
+                      </>
+                    }
                     href="/investment-challenge"
                     status="Coming Soon"
                   />
@@ -217,7 +308,19 @@ export function Home() {
                 <SectionReveal delay={0.4}>
                   <ProgramCard
                     title="Economic Competitions"
-                    description="Registration for Ransom Everglades Economics competition teams."
+                    description={
+                      <>
+                        MVE organizes teams for regional and national challenges
+                        and university-led invitationals such as the{" "}
+                        <span className="italic text-[#C8A55C] font-heading">
+                          Wharton Investment Challenge
+                        </span>
+                        . Starting next semester, students undergo sessions to
+                        master economic principles and strategic thinking before
+                        starting competitions, to foster good practice and
+                        ensure success.
+                      </>
+                    }
                     href="/competitions"
                     status="Coming Soon"
                   />

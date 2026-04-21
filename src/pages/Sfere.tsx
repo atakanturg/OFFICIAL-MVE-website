@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { ProgramDescription } from "../components/ProgramDescription";
 
 export function Sfere() {
   const containerVariants = {
@@ -83,15 +84,32 @@ export function Sfere() {
               </span>
             </div>
 
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={itemVariants}
-              className="text-lg text-[#A0A0A0] leading-relaxed max-w-3xl mb-16 border-l-2 border-[#C8A55C]/30 pl-6"
-            >
-              SFERE is an economic symposium hosted by MVE featuring highlighted keynote speakers, student poster board presentations, and a guest panel of industry professionals. Details for the upcoming event will be announced soon.
-            </motion.p>
+            <ProgramDescription
+              description={
+                <>
+                  Acting as our capstone event for the second semester, the{" "}
+                  <span className="italic text-[#C8A55C] font-heading">
+                    South Florida Economic Ransom Everglades Symposium
+                  </span>{" "}
+                  kicks off with a{" "}
+                  <span className="italic text-[#C8A55C] font-heading">
+                    Poster Board Gallery
+                  </span>{" "}
+                  where students present original research. This is followed by{" "}
+                  <span className="italic text-[#C8A55C] font-heading">
+                    Keynote Speakers
+                  </span>{" "}
+                  from students analyzing real world problems and presenting on
+                  their proposed actionable solution. The event concludes with a{" "}
+                  <span className="italic text-[#C8A55C] font-heading">
+                    Guest Panel Discussion
+                  </span>{" "}
+                  featuring professionals debating economic trends, paths to
+                  success, etc.
+                </>
+              }
+              className="mb-16 pb-8 border-b border-white/[0.05]"
+            />
 
             <motion.div
               variants={containerVariants}
