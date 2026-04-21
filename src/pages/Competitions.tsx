@@ -27,7 +27,7 @@ export function Competitions() {
           <ScrollIndicator delay={0.5} />
 
           <motion.div className="absolute top-24 z-20">
-            <span className="text-[#C8A55C] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">
+            <span className="text-[#C8A55C] text-xs font-bold tracking-[0.2em] uppercase border-b border-[#C8A55C]/30 pb-1">
               Coming Soon
             </span>
           </motion.div>
@@ -57,8 +57,28 @@ export function Competitions() {
                 competitions, to foster good practice and ensure success.
               </>
             }
-            className="mt-8"
+            className="my-12"
           />
+
+          {/* Submissions Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="w-full max-w-sm mx-auto"
+          >
+            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#C8A55C] mb-8 flex items-center justify-center gap-3 text-center">
+              Applications
+            </h2>
+            <div className="flex flex-col gap-4">
+              <div className="px-6 py-4 rounded-xl border border-white/[0.05] bg-white/[0.02] text-[#666666] font-bold text-xs tracking-[0.2em] uppercase cursor-not-allowed transition-all text-center">
+                Apply Here
+              </div>
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#C8A55C]/30 pl-3 text-left">
+                Links will activate once applications are open.
+              </p>
+            </div>
+          </motion.div>
         </section>
       </div>
     </PageTransition>

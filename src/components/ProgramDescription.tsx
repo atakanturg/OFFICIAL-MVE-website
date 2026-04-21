@@ -4,10 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 interface ProgramDescriptionProps {
   description: React.ReactNode;
   className?: string;
+  initialOpen?: boolean;
 }
 
-export function ProgramDescription({ description, className = "" }: ProgramDescriptionProps) {
-  const [showDescription, setShowDescription] = useState(false);
+export function ProgramDescription({ 
+  description, 
+  className = "", 
+  initialOpen = false 
+}: ProgramDescriptionProps) {
+  const [showDescription, setShowDescription] = useState(initialOpen);
 
   return (
     <div className={`mt-2 ${className}`}>

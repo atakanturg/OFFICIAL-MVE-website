@@ -53,7 +53,7 @@ export function InvestmentSummitDetails() {
           animate="visible"
           className="mb-20"
         >
-          <h2 className="text-xs font-semibold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
+          <h2 className="text-xs font-bold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
             How It Works
           </h2>
 
@@ -83,7 +83,7 @@ export function InvestmentSummitDetails() {
           animate="visible"
           className="mb-20"
         >
-          <h2 className="text-xs font-semibold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
+          <h2 className="text-xs font-bold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
             Finalist Teams
           </h2>
 
@@ -101,7 +101,7 @@ export function InvestmentSummitDetails() {
           initial="hidden"
           animate="visible"
         >
-          <h2 className="text-xs font-semibold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
+          <h2 className="text-xs font-bold tracking-[0.25em] uppercase text-[#C8A55C] mb-8 flex items-center gap-2">
             Awards
           </h2>
 

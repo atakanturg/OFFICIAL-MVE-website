@@ -312,7 +312,7 @@ export function Home() {
                       <>
                         MVE organizes teams for regional and national challenges
                         and university-led invitationals such as the{" "}
-                        <span className="italic text-[#C8A55C] font-heading">
+                        <span className="italic text-[#C8A55C] font-heading font-bold text-base">
                           Wharton Investment Challenge
                         </span>
                         . Starting next semester, students undergo sessions to
@@ -338,7 +338,7 @@ export function Home() {
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
           <SectionReveal>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[#F5F5F0] leading-tight mb-8">
-              Join the MVE Community
+              Join the <span className="italic text-[#C8A55C] font-heading font-bold">MVE</span> Community
             </h2>
             <p className="text-lg text-[#A0A0A0] mb-12 max-w-2xl mx-auto">
               Get involved with our competitions, investing programs, and economic discourse events taking place locally at Ransom Everglades.

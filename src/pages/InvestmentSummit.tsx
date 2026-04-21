@@ -121,7 +121,7 @@ export function InvestmentSummit() {
         >
           {/* Timeline */}
           <section>
-            <h2 className="text-xs font-semibold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
+            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
               Timeline
             </h2>
             <motion.div
@@ -139,7 +139,7 @@ export function InvestmentSummit() {
 
           {/* Submissions */}
           <section>
-            <h2 className="text-xs font-semibold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
+            <h2 className="text-xs font-bold tracking-[0.3em] uppercase text-[#C8A55C] mb-10 flex items-center gap-3">
               Submissions
             </h2>
             <motion.div
@@ -154,7 +154,7 @@ export function InvestmentSummit() {
               <SubmissionButton label="Voting Procedure" url={config.submissionUrls.voting} variant="neutral" />
             </motion.div>
             {(!config.submissionUrls.opens || !config.submissionUrls.qualifiers || !config.submissionUrls.finalists) && (
-              <p className="mt-5 text-[10px] font-semibold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#C8A55C]/30 pl-3">
+              <p className="mt-5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#C8A55C]/30 pl-3">
                 Links activate as rounds open.
               </p>
             )}
