@@ -1,0 +1,96 @@
+/* ─── Homepage Section Layout ─── */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-section {
+  padding: 120px 24px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .content-section {
+    padding: 160px 48px;
+  }
+}
+
+/* ─── Scroll Indicator ─── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.scroll-indicator {
+  animation: scroll-bounce 2s infinite ease-in-out;
+}
+
+/* ─── Stats Counter ─── */
+.stat-number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-heading);
+}
+
+/* ─── Program Card Grid ─── */
+.programs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── Speaker Carousel ─── */
+.speaker-carousel {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+}
+
+.speaker-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.speaker-carousel-item {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .speaker-carousel-item {
+    width: 320px;
+  }
+}
+
+/* ─── Image Treatment ─── */
+.image-desaturate {
+  filter: grayscale(30%) contrast(1.1);
+  transition: filter 0.4s ease;
+}
+
+.image-desaturate:hover {
+  filter: none;
+}
