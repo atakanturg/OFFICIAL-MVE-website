@@ -19,7 +19,7 @@ export function ScrollIndicator({ delay = 1.2 }: ScrollIndicatorProps) {
   }, [delay]);
 
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: ReturnType<typeof setTimeout>;
 
     const handleScroll = () => {
       setIsIdle(false);

@@ -56,9 +56,9 @@ export function Navbar() {
           <Link
             to={location === "/" ? "/" : "/#programs"}
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 hover:opacity-80 transition-opacity flex items-center justify-center"
+            className="px-4 hover:opacity-80 transition-opacity flex items-center justify-center -my-1"
           >
-            <img src="/mve-logo-transparent.png" alt="MVE Logo" className="h-6 w-auto object-contain" />
+            <img src="/mve-logo-transparent.png" alt="MVE Logo" className="h-10 md:h-11 w-auto object-contain scale-[1.15]" />
           </Link>
 
           {/* Contact CTA */}
