@@ -180,7 +180,7 @@ export function Home() {
                   e.preventDefault();
                   document.getElementById('mailing-list')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-btn group/btn text-[#58C391] font-bold hover:text-[#E03E3E] transition-colors flex items-center gap-2"
+                className="text-btn group/btn !text-[#58C391] font-bold hover:!text-[#E03E3E] transition-colors flex items-center gap-2"
               >
                 MVE Mailing List
                 <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-y-1">↓</span>
