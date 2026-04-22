@@ -202,7 +202,7 @@ export function Home() {
           <SectionReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
               <StatCounter value={200} suffix="+" label="Active Members" />
-              <StatCounter value={3} suffix="" label="Years Running" />
+              <StatCounter value={4} suffix="" label="Years Running" />
               <StatCounter value={6} suffix="" label="Core Programs" />
             </div>
           </SectionReveal>
