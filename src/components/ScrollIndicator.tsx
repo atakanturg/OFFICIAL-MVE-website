@@ -27,7 +27,7 @@ export function ScrollIndicator({ delay = 1.2 }: ScrollIndicatorProps) {
       
       scrollTimeout = setTimeout(() => {
         setIsIdle(true);
-      }, 4850);
+      }, 2300);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
