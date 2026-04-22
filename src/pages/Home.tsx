@@ -98,7 +98,7 @@ export function Home() {
             className="text-lg md:text-xl text-[#A0A0A0] max-w-2xl mx-auto leading-relaxed"
           >
             Miami's largest student-led investment and entrepreneurship club
-            driving competitions, consulting, and economic discourse.
+            driving initiatives, consulting, and economic discourse.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -148,7 +148,7 @@ export function Home() {
 
           <SectionReveal delay={0.2} className="mt-32 mb-32">
             <p className="text-2xl md:text-3xl font-heading text-[#F5F5F0]/80 leading-relaxed max-w-3xl">
-              We drive <span className="text-[#58C391]">competitions</span>,{" "}
+              We drive <span className="text-[#58C391]">programs</span>,{" "}
               <span className="text-[#58C391]">investing</span>, and{" "}
               <span className="text-[#58C391]">consulting</span>,{" "}
               equipping students with the tools to think critically about
@@ -307,7 +307,7 @@ export function Home() {
                 </SectionReveal>
                 <SectionReveal delay={0.4}>
                   <ProgramCard
-                    title="Economic Competitions"
+                    title="Economic Challenges"
                     description={
                       <>
                         MVE organizes teams for regional and national challenges
@@ -317,7 +317,7 @@ export function Home() {
                         </span>
                         . Starting next semester, students undergo sessions to
                         master economic principles and strategic thinking before
-                        starting competitions, to foster good practice and
+                        starting these events, to foster good practice and
                         ensure success.
                       </>
                     }
@@ -341,7 +341,7 @@ export function Home() {
               Join the <span className="italic text-[#58C391] font-heading font-bold">MVE</span> Community
             </h2>
             <p className="text-lg text-[#A0A0A0] mb-12 max-w-2xl mx-auto">
-              Get involved with our competitions, investing programs, and economic discourse events taking place locally at Ransom Everglades.
+              Get involved with our programs, investing challenges, and economic discourse events taking place locally at Ransom Everglades.
             </p>
             <Link
               to="/contact"

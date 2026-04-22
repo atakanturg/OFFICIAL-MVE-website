@@ -38,7 +38,7 @@ export function Competitions() {
           >
             <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-[#F5F5F0] text-center uppercase">
               Economic{" "}
-              <span className="italic text-[#58C391]">Competitions</span>
+              <span className="italic text-[#58C391]">Challenges</span>
             </h1>
           </motion.div>
 
@@ -52,7 +52,7 @@ export function Competitions() {
                 </span>
                 . Starting next semester, students undergo sessions to master
                 economic principles and strategic thinking before starting
-                competitions, to foster good practice and ensure success.
+                these events, to foster good practice and ensure success.
               </>
             }
             className="my-12"
