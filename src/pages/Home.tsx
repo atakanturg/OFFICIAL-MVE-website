@@ -269,8 +269,8 @@ export function Home() {
                         </span>
                         : Teams will be tasked with researching their
                         respective case studies and preparing a pitch in order
-                        to sway the view of the attending viewers into a buy or
-                        sell decision on their case study.
+                        to sway the view of the attendees into a buy or sell
+                        decision.
                         <br />
                         <br />
                         <span className="italic text-[#58C391] font-heading font-bold text-base">

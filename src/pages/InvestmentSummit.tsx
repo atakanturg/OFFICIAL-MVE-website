@@ -78,10 +78,9 @@ export function InvestmentSummit() {
                 <span className="italic text-[#58C391] font-heading font-bold text-base">
                   Qualifications Round
                 </span>
-                : Selected teams will be assigned a recognizable company (under
-                fake names). Teams will be tasked with researching these case
-                studies and preparing a pitch in order to sway investors into
-                buying their stock.
+                : Teams will be tasked with researching their respective case
+                studies and preparing a pitch in order to sway the view of the
+                attendees into a buy or sell decision.
                 <br />
                 <br />
                 <span className="italic text-[#58C391] font-heading font-bold text-base">
