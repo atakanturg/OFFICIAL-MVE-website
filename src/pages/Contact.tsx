@@ -12,6 +12,11 @@ export function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  
+  const [feedbackName, setFeedbackName] = useState("");
+  const [feedbackBody, setFeedbackBody] = useState("");
+  const [feedbackStatus, setFeedbackStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
   const toEmail = "28aturgut@ransomeverglades.org";
 
   const containerVariants = {
@@ -51,6 +56,40 @@ export function Contact() {
       console.error("EmailJS Error:", err);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 4000);
+    });
+  };
+
+  const handleFeedbackSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!feedbackBody) return;
+
+    setFeedbackStatus("sending");
+
+    const composedMessage = feedbackName.trim() 
+      ? `From: ${feedbackName}\n\n${feedbackBody}`
+      : feedbackBody;
+
+    emailjs.send(
+      "service_yk9lrx7",
+      "template_ogig5pc",
+      {
+        to_email: toEmail,
+        reply_to: "anonymous@mve.local",
+        subject: "MVE Website Feedback Form",
+        message: composedMessage
+      },
+      "gQjuxqPH6b11Y1Xe3"
+    ).then(() => {
+      setFeedbackStatus("sent");
+      setTimeout(() => {
+        setFeedbackStatus("idle");
+        setFeedbackName("");
+        setFeedbackBody("");
+      }, 4000);
+    }).catch((err) => {
+      console.error("EmailJS Error:", err);
+      setFeedbackStatus("error");
+      setTimeout(() => setFeedbackStatus("idle"), 4000);
     });
   };
 
@@ -218,6 +257,83 @@ export function Contact() {
                       <>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
                         Send Message
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+
+            {/* Feedback Form */}
+            <motion.div
+              id="feedback"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="w-full max-w-3xl scroll-mt-32 mt-12 mb-20"
+            >
+              <div className="bg-[#111111] border border-white/[0.06] rounded-lg p-8 md:p-12">
+                <h3 className="text-2xl font-heading font-bold text-[#F5F5F0] tracking-wide uppercase mb-2">
+                  Feedback Form
+                </h3>
+                <p className="text-sm text-[#666666] mb-8">
+                  Notice an issue or have a suggestion? Let us know below.
+                </p>
+
+                <form onSubmit={handleFeedbackSubmit} className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="feedbackName" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">
+                      From (Optional)
+                    </label>
+                    <input
+                      id="feedbackName"
+                      type="text"
+                      value={feedbackName}
+                      onChange={(e) => setFeedbackName(e.target.value)}
+                      placeholder="Your Name"
+                      className={inputClasses}
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="feedbackBody" className="text-xs font-semibold tracking-[0.2em] text-[#58C391] uppercase">
+                      Message Body
+                    </label>
+                    <textarea
+                      id="feedbackBody"
+                      required
+                      value={feedbackBody}
+                      onChange={(e) => setFeedbackBody(e.target.value)}
+                      placeholder="Share your feedback here..."
+                      rows={6}
+                      className={`${inputClasses} resize-none`}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={feedbackStatus === "sending"}
+                    className="self-start inline-flex items-center gap-3 px-8 py-3 bg-[#58C391] text-[#0A0A0A] font-semibold text-sm tracking-wide rounded-full hover:bg-[#76D3A5] transition-colors cursor-pointer disabled:opacity-50"
+                  >
+                    {feedbackStatus === "sending" ? (
+                      <>
+                        <div className="h-4 w-4 border-2 border-[#0A0A0A] border-t-transparent rounded-full animate-spin" />
+                        Submitting...
+                      </>
+                    ) : feedbackStatus === "sent" ? (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Feedback Sent
+                      </>
+                    ) : feedbackStatus === "error" ? (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Error Sending
+                      </>
+                    ) : (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                        Submit Feedback
                       </>
                     )}
                   </button>

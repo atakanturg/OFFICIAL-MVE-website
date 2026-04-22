@@ -135,6 +135,13 @@ export function Navbar() {
                 >
                   Contact
                 </Link>
+                <a
+                  href="/contact#feedback"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm text-[#666666] hover:text-[#58C391] transition-colors tracking-widest uppercase font-medium"
+                >
+                  Feedback Form
+                </a>
               </motion.div>
             </motion.div>
           </motion.div>
