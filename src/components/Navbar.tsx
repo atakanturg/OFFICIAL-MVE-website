@@ -52,13 +52,13 @@ export function Navbar() {
             </span>
           </button>
 
-          {/* MVE Wordmark */}
+          {/* MVE Logo */}
           <Link
             to={location === "/" ? "/" : "/#programs"}
             onClick={() => setIsOpen(false)}
-            className="px-4 py-2 text-[#58C391] font-heading font-bold text-lg tracking-[0.15em] hover:opacity-80 transition-opacity"
+            className="px-4 py-2 hover:opacity-80 transition-opacity flex items-center justify-center"
           >
-            MVE
+            <img src="/mve-logo-transparent.png" alt="MVE Logo" className="h-6 w-auto object-contain" />
           </Link>
 
           {/* Contact CTA */}
