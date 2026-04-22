@@ -131,8 +131,7 @@ export function Home() {
             transition={{ delay: 0.8 }}
             className="text-lg md:text-xl text-[#A0A0A0] max-w-2xl mx-auto leading-relaxed"
           >
-            Miami's largest student-led investment and entrepreneurship club
-            driving initiatives, consulting, and economic discourse.
+            As Ransom Everglades' largest student-led club, we are focused on navigating the economic side of the world.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -209,11 +208,8 @@ export function Home() {
 
           <SectionReveal delay={0.2} className="mt-32 mb-32">
             <p className="text-2xl md:text-3xl font-heading text-[#F5F5F0]/80 leading-relaxed max-w-3xl">
-              We drive <span className="text-[#58C391]">programs</span>,{" "}
-              <span className="text-[#58C391]">investing</span>, and{" "}
-              <span className="text-[#58C391]">consulting</span>,{" "}
-              equipping students with the tools to think critically about
-              markets and the economy.
+              Through events specialized in <span className="text-[#58C391]">investing</span> and{" "}
+              <span className="text-[#58C391]">consulting</span>, we equip our club members with the tools to critically analyze equities, sectors, markets, and economies.
             </p>
           </SectionReveal>
 
