@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -126,7 +126,7 @@ export function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="flex gap-6 mt-8 pt-6 border-t border-white/[0.06]"
+                className="flex flex-col items-center gap-4 mt-8 pt-6 border-t border-white/[0.06] w-full"
               >
                 <Link
                   to="/contact"
@@ -137,7 +137,20 @@ export function Navbar() {
                 </Link>
                 <a
                   href="/contact#feedback"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    if (location !== "/contact") {
+                      setLocation("/contact");
+                      setTimeout(() => {
+                         window.location.hash = "feedback";
+                         document.getElementById("feedback")?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    } else {
+                      window.location.hash = "feedback";
+                      document.getElementById("feedback")?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className="text-sm text-[#666666] hover:text-[#58C391] transition-colors tracking-widest uppercase font-medium"
                 >
                   Feedback Form
