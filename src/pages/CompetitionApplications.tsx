@@ -141,9 +141,9 @@ export function CompetitionApplications() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="w-full max-w-4xl mx-auto mt-16 px-4"
+            className="w-full max-w-6xl mx-auto mt-16 px-4"
           >
-            <div className="flex flex-col gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {competitions.map((comp, index) => (
                 <motion.div
                   key={comp.name}
@@ -152,33 +152,37 @@ export function CompetitionApplications() {
                   transition={{ delay: 0.5 + index * 0.1 }}
                   className="flex flex-col rounded-xl border border-white/[0.05] bg-white/[0.02] overflow-hidden"
                 >
-                  <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8">
-                    <div className="flex flex-col gap-2 text-center md:text-left">
-                      <h3 className="text-lg md:text-xl font-bold tracking-[0.1em] uppercase text-[#F5F5F0]">
-                        {comp.name}
-                      </h3>
-                      <button
-                        onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                        className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] hover:text-[#76D3A5] transition-colors cursor-pointer w-fit mx-auto md:mx-0"
-                      >
-                        {expandedIndex === index ? "[ Hide Details ]" : "[ View Details ]"}
-                      </button>
+                  <div className="flex flex-col p-8 h-full">
+                    <div className="flex-1 flex flex-col">
+                      <span className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-3 ${comp.isLocked ? "text-[#666666]" : "text-[#58C391]"}`}>
+                        {comp.isLocked ? "Locked" : "Active"}
+                      </span>
+                      
+                      {comp.isLocked ? (
+                        <h3 className="text-xl md:text-2xl font-bold tracking-[0.05em] uppercase text-[#666666] cursor-not-allowed transition-all">
+                          {comp.name}
+                        </h3>
+                      ) : (
+                        <a
+                          href={comp.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group w-fit"
+                        >
+                          <h3 className="text-xl md:text-2xl font-bold tracking-[0.05em] uppercase text-[#F5F5F0] group-hover:text-[#58C391] transition-all relative inline-block">
+                            {comp.name}
+                            <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#58C391] transition-all duration-300 group-hover:w-full" />
+                          </h3>
+                        </a>
+                      )}
                     </div>
-                    
-                    {comp.isLocked ? (
-                      <div className="px-8 py-4 rounded-xl border border-white/[0.05] bg-white/[0.02] text-[#666666] font-bold text-xs tracking-[0.2em] uppercase cursor-not-allowed text-center min-w-[220px] whitespace-nowrap">
-                        Currently Locked
-                      </div>
-                    ) : (
-                      <a
-                        href={comp.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-8 py-4 rounded-xl border border-[#58C391]/30 hover:border-[#58C391] hover:bg-[#58C391]/10 text-white font-bold text-xs tracking-[0.2em] uppercase cursor-pointer transition-all text-center min-w-[220px]"
-                      >
-                        Application
-                      </a>
-                    )}
+
+                    <button
+                      onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                      className="mt-8 text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] hover:text-[#58C391] transition-colors cursor-pointer w-fit"
+                    >
+                      {expandedIndex === index ? "[ Hide Details ]" : "[ View Details ]"}
+                    </button>
                   </div>
 
                   <AnimatePresence>
@@ -188,36 +192,30 @@ export function CompetitionApplications() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                        className="overflow-hidden"
+                        className="overflow-hidden bg-white/[0.01]"
                       >
-                        <div className="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/[0.05]">
-                          <div className="flex flex-col gap-4">
+                        <div className="px-8 pb-8 pt-4 grid grid-cols-1 gap-6 border-t border-white/[0.05]">
+                          <div className="grid grid-cols-2 gap-4">
                             <div>
                               <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Team Size</h4>
-                              <p className="text-sm text-[#A0A0A0]">{comp.details.teamSize}</p>
+                              <p className="text-xs text-[#A0A0A0]">{comp.details.teamSize}</p>
                             </div>
                             <div>
-                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Application Requirements</h4>
-                              <p className="text-sm text-[#A0A0A0]">{comp.details.requirements}</p>
-                            </div>
-                            <div>
-                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Main Focus</h4>
-                              <p className="text-sm text-[#A0A0A0]">{comp.details.focus}</p>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Output</h4>
+                              <p className="text-xs text-[#A0A0A0]">{comp.details.output}</p>
                             </div>
                           </div>
-                          <div className="flex flex-col gap-4">
-                            <div>
-                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Regulations</h4>
-                              <p className="text-sm text-[#A0A0A0]">{comp.details.regulations}</p>
-                            </div>
-                            <div>
-                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Limitations</h4>
-                              <p className="text-sm text-[#A0A0A0]">{comp.details.limitations}</p>
-                            </div>
-                            <div>
-                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Key Detail</h4>
-                              <p className="text-sm text-[#A0A0A0] font-medium italic text-[#F5F5F0]/80">{comp.details.keyDetail}</p>
-                            </div>
+                          <div>
+                            <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Requirements</h4>
+                            <p className="text-xs text-[#A0A0A0]">{comp.details.requirements}</p>
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Main Focus</h4>
+                            <p className="text-xs text-[#A0A0A0]">{comp.details.focus}</p>
+                          </div>
+                          <div>
+                            <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Key Detail</h4>
+                            <p className="text-xs font-medium italic text-[#F5F5F0]/80">{comp.details.keyDetail}</p>
                           </div>
                         </div>
                       </motion.div>
@@ -232,4 +230,5 @@ export function CompetitionApplications() {
     </PageTransition>
   );
 }
+
 
