@@ -5,23 +5,8 @@ Prioritzing a sleek, minimalistic design and functionality.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is the code for the prototype of the MVE clubs website created by Atakan Turgut. The draft website is live at 
-[THIS LINK](https://draft-mve.vercel.app) and is deployed using vercel.
+This is the code for the MVE clubs website created by Atakan Turgut. The temporary website deployment is live at 
+[THIS LINK](https://official-mve.vercel.app)
 
 
 
