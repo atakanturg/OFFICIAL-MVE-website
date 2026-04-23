@@ -1,40 +1,117 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { PageTransition } from "../components/PageTransition";
+import { useState } from "react";
+
+interface Competition {
+  name: string;
+  link: string;
+  isLocked: boolean;
+  details: {
+    teamSize: string;
+    output: string;
+    focus: string;
+    requirements: string;
+    regulations: string;
+    limitations: string;
+    keyDetail: string;
+  };
+}
 
 export function CompetitionApplications() {
-  const competitions = [
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const competitions: Competition[] = [
     {
-      name: "Wharton Investment Competition",
-      link: "https://forms.gle/ABm6C6QedDT42i7h6",
-      isLocked: false,
-    },
-    {
-      name: "National Economics Challenge",
+      name: "The Diamond Challenge",
       link: "#",
       isLocked: true,
+      details: {
+        teamSize: "2–4 high school students",
+        output: "Pitch / Business Plan",
+        focus: "Entrepreneurship & Innovation with a focus on economic/social impact",
+        requirements: "A written concept narrative (3–5 pages), a 60-second introductory video, and one adult advisor (21+).",
+        regulations: "Concepts must not have generated more than $100,000 in revenue. Tracks: Business Innovation or Social Innovation.",
+        limitations: "Students can only participate on one team and submit one concept per year. You cannot resubmit a concept that previously reached the semi-finals.",
+        keyDetail: "The first round is virtual, but advancing teams are invited to the 'Limitless World Summit' to pitch in person."
+      }
+    },
+    {
+      name: "National Economics Challenge (NEC)",
+      link: "#",
+      isLocked: true,
+      details: {
+        teamSize: "3–4 members from the same school or organization",
+        output: "Exam / Quiz Bowl",
+        focus: "Academic Economics Theory",
+        requirements: "Registration via a teacher/coach.",
+        regulations: "Divisions: David Ricardo (first-time) or Adam Smith (advanced). 4 rounds: Micro, Macro, International, and Quiz Bowl.",
+        limitations: "All team members must be from the same school/club.",
+        keyDetail: "State round is a rapid-fire online exam. Top national teams travel to NYC for finals."
+      }
+    },
+    {
+      name: "Wharton Global Youth Investment Competition",
+      link: "https://forms.gle/ABm6C6QedDT42i7h6",
+      isLocked: false,
+      details: {
+        teamSize: "4–7 students",
+        output: "Strategy Report",
+        focus: "Long-term Portfolio Strategy & Management",
+        requirements: "Must use the Wharton Investment Simulator (WInS).",
+        regulations: "$100,000 virtual cash. Requires a mid-project team review and a final comprehensive investment strategy report.",
+        limitations: "Focus on strategy strength, not highest returns. Penny stock gambling is discouraged.",
+        keyDetail: "Pitching your strategy to a potential client described in a case study."
+      }
     },
     {
       name: "The Stock Market Game",
       link: "#",
       isLocked: true,
+      details: {
+        teamSize: "1–5 students",
+        output: "Trading",
+        focus: "Short-term Market Returns",
+        requirements: "Entry fee (typically $20–$30 per team, often covered by schools).",
+        regulations: "Manage a $100,000 virtual portfolio. Rankings strictly based on Total Equity.",
+        limitations: "Max 20% equity in a single stock to encourage diversification.",
+        keyDetail: "Operates in Fall, Spring, or Year-long sessions."
+      }
     },
     {
-      name: "High School Fed Challenge Competition",
+      name: "High School Fed Challenge",
       link: "#",
       isLocked: true,
+      details: {
+        teamSize: "3–8 students",
+        output: "Presentation / Podcast",
+        focus: "Macroeconomic Policy & The Federal Reserve",
+        requirements: "Podcast script (NYC) or 15-min presentation + Q&A (Other districts).",
+        regulations: "Analyze current conditions and recommend monetary policy (interest rates, QE).",
+        limitations: "One team per school. Strict geographic eligibility.",
+        keyDetail: "Focus on the Federal Reserve's 'Dual Mandate' (price stability & maximum employment)."
+      }
     },
     {
-      name: "John Locke Institute Global Essay Competition",
+      name: "John Locke Institute Essay Competition",
       link: "#",
       isLocked: true,
-    },
+      details: {
+        teamSize: "Individual",
+        output: "Essay",
+        focus: "Economic Philosophy, Logic & Writing",
+        requirements: "Essay of no more than 2,000 words.",
+        regulations: "Choose a specific prompt from the 'Economics' category.",
+        limitations: "Under 19 years old. Judged on argument quality, evidence, and prose.",
+        keyDetail: "Massive differentiator for top-tier university applications. Bridges economics with philosophy."
+      }
+    }
   ];
 
   return (
     <PageTransition>
       <div className="flex flex-col min-h-screen tracking-wide pointer-events-auto">
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-12">
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-32">
           {/* Back Link */}
           <motion.div
             initial={{ opacity: 0, x: -12 }}
@@ -64,35 +141,88 @@ export function CompetitionApplications() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="w-full max-w-2xl mx-auto mt-16 px-4"
+            className="w-full max-w-4xl mx-auto mt-16 px-4"
           >
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-8">
               {competitions.map((comp, index) => (
                 <motion.div
                   key={comp.name}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 rounded-xl border border-white/[0.05] bg-white/[0.02]"
+                  className="flex flex-col rounded-xl border border-white/[0.05] bg-white/[0.02] overflow-hidden"
                 >
-                  <h3 className="text-sm md:text-base font-bold tracking-[0.1em] uppercase text-[#F5F5F0] text-center md:text-left">
-                    {comp.name}
-                  </h3>
-                  
-                  {comp.isLocked ? (
-                    <div className="px-6 py-3 rounded-xl border border-white/[0.05] bg-white/[0.02] text-[#666666] font-bold text-xs tracking-[0.2em] uppercase cursor-not-allowed text-center min-w-[200px] whitespace-nowrap">
-                      Currently Locked
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8">
+                    <div className="flex flex-col gap-2 text-center md:text-left">
+                      <h3 className="text-lg md:text-xl font-bold tracking-[0.1em] uppercase text-[#F5F5F0]">
+                        {comp.name}
+                      </h3>
+                      <button
+                        onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                        className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] hover:text-[#76D3A5] transition-colors cursor-pointer w-fit mx-auto md:mx-0"
+                      >
+                        {expandedIndex === index ? "[ Hide Details ]" : "[ View Details ]"}
+                      </button>
                     </div>
-                  ) : (
-                    <a
-                      href={comp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-3 rounded-xl border border-[#58C391]/30 hover:border-[#58C391] hover:bg-[#58C391]/10 text-white font-bold text-xs tracking-[0.2em] uppercase cursor-pointer transition-all text-center min-w-[200px]"
-                    >
-                      Application
-                    </a>
-                  )}
+                    
+                    {comp.isLocked ? (
+                      <div className="px-8 py-4 rounded-xl border border-white/[0.05] bg-white/[0.02] text-[#666666] font-bold text-xs tracking-[0.2em] uppercase cursor-not-allowed text-center min-w-[220px] whitespace-nowrap">
+                        Currently Locked
+                      </div>
+                    ) : (
+                      <a
+                        href={comp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-4 rounded-xl border border-[#58C391]/30 hover:border-[#58C391] hover:bg-[#58C391]/10 text-white font-bold text-xs tracking-[0.2em] uppercase cursor-pointer transition-all text-center min-w-[220px]"
+                      >
+                        Application
+                      </a>
+                    )}
+                  </div>
+
+                  <AnimatePresence>
+                    {expandedIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/[0.05]">
+                          <div className="flex flex-col gap-4">
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Team Size</h4>
+                              <p className="text-sm text-[#A0A0A0]">{comp.details.teamSize}</p>
+                            </div>
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Application Requirements</h4>
+                              <p className="text-sm text-[#A0A0A0]">{comp.details.requirements}</p>
+                            </div>
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Main Focus</h4>
+                              <p className="text-sm text-[#A0A0A0]">{comp.details.focus}</p>
+                            </div>
+                          </div>
+                          <div className="flex flex-col gap-4">
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Regulations</h4>
+                              <p className="text-sm text-[#A0A0A0]">{comp.details.regulations}</p>
+                            </div>
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Limitations</h4>
+                              <p className="text-sm text-[#A0A0A0]">{comp.details.limitations}</p>
+                            </div>
+                            <div>
+                              <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#58C391] mb-1">Key Detail</h4>
+                              <p className="text-sm text-[#A0A0A0] font-medium italic text-[#F5F5F0]/80">{comp.details.keyDetail}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.div>
               ))}
             </div>
@@ -102,3 +232,4 @@ export function CompetitionApplications() {
     </PageTransition>
   );
 }
+

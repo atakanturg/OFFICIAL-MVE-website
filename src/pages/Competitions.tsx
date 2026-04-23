@@ -42,15 +42,14 @@ export function Competitions() {
             description={
               <>
                 MVE organizes teams for regional and national challenges and
-                university-led invitationals such as the{" "}
-                <span className="italic text-[#58C391] font-heading font-bold text-base">
-                  Wharton Investment Challenge
-                </span>
-                . Starting next semester, students undergo sessions to master
-                economic principles and strategic thinking before starting
-                these events, to foster good practice and ensure success.
+                university-led invitationals. Starting next semester, students
+                in the <span className="italic text-[#58C391] font-heading font-bold">COMPETITIONS BRANCH</span> will undergo
+                sessions to master economic principles to foster good practice
+                and ensure success. Members in this branch will gain be favored
+                when it comes to economic competition related team selection.
               </>
             }
+            initialOpen={true}
             className="my-12"
           />
 
