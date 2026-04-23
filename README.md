@@ -1,4 +1,4 @@
-**Currently on update 11**
+**Currently on update 34**
 
 This is the **OFFICIAL** MVE WEBSITE
 Prioritzing a sleek, minimalistic design and functionality.
