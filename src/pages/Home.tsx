@@ -434,10 +434,10 @@ export function Home() {
                 </h2>
                 <div className="text-base md:text-lg text-[#A0A0A0] max-w-2xl mx-auto flex flex-col gap-4">
                   <p className="font-bold tracking-wider text-[#F5F5F0]">
-                    For ALUMNI, PARENT & INTERESTED INDUSTRY PROFESSIONALS only.
+                    For ALUMNI, PARENTS & INTERESTED INDUSTRY PROFESSIONALS only.
                   </p>
                   <p>
-                    Connecting our parent & alumni network with student events & accomplishments.
+                    Connecting our parent/alumni network with student events & accomplishments.
                   </p>
                 </div>
               </div>
