@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { config } from "../config";
 import { FinalistCard } from "../components/FinalistCard";
 import { PageTransition } from "../components/PageTransition";
-import { ScrollIndicator } from "../components/ScrollIndicator";
+
 
 export function InvestmentSummitDetails() {
   const containerVariants = {
@@ -33,7 +33,7 @@ export function InvestmentSummitDetails() {
           </Link>
         </motion.div>
 
-        <ScrollIndicator delay={0.5} />
+
 
         {/* Page title */}
         <motion.div

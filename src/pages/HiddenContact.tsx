@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { PageTransition } from "../components/PageTransition";
-import { ScrollIndicator } from "../components/ScrollIndicator";
+
 
 const SPEAKER_CONFIG = {
   "freshmen": {
@@ -94,7 +94,7 @@ export function HiddenContact({ params }: { params: { id: string } }) {
           </Link>
         </motion.div>
 
-        <ScrollIndicator delay={0.5} />
+
 
         <section className="py-32 min-h-[90vh] flex flex-col justify-center items-center w-full px-6">
           <div className="mx-auto max-w-3xl relative z-10 w-full flex flex-col items-center">

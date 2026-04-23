@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionReveal } from "../components/SectionReveal";
 import { ProgramCard } from "../components/ProgramCard";
-import { ScrollIndicator } from "../components/ScrollIndicator";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,7 @@ export function Home() {
       {/* ═══════════════════════════════════════════
           SECTION 1: Hero
       ═══════════════════════════════════════════ */}
-      <section className="hero-section px-6 pt-40 pb-32 flex flex-col items-center justify-start min-h-[90vh]">
+      <section className="hero-section px-6 pt-24 pb-32 flex flex-col items-center justify-start min-h-[90vh]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export function Home() {
           className="text-center max-w-5xl mx-auto flex flex-col items-center justify-center w-full"
         >
         {/* Scroll Indicator (Top) */}
-        <ScrollIndicator delay={1.5} />
+
 
           {/* Pre-heading */}
           <motion.p
@@ -139,7 +139,7 @@ export function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="flex flex-col items-center gap-8 mt-12"
+            className="flex flex-col items-center gap-6 mt-8"
           >
             <div className="flex flex-col items-center gap-4">
               <span className="text-[10px] font-semibold tracking-[0.3em] text-[#666666] uppercase mb-1">Capstone Events</span>
@@ -158,10 +158,17 @@ export function Home() {
                   SFERE Symposium
                   <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
                 </Link>
+                <Link
+                  to="/competitions"
+                  className="text-btn group/btn hover:text-[#E03E3E] transition-colors"
+                >
+                  Competitions
+                  <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-x-1">→</span>
+                </Link>
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-10 mt-2">
+            <div className="flex flex-wrap justify-center gap-10 mt-0">
               <div 
                 className="text-btn group/btn opacity-50 cursor-not-allowed flex items-center gap-3"
                 title="Coming Soon"
@@ -171,7 +178,9 @@ export function Home() {
                   Coming Soon
                 </span>
                 MVE Calendar
-                <span className="text-xl text-[#58C391]">↓</span>
+                <span className="text-xl text-[#58C391] pb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </span>
               </div>
               <a
                 href="#mailing-list"
@@ -182,7 +191,9 @@ export function Home() {
                 className="text-btn group/btn !text-[#58C391] font-bold hover:!text-[#E03E3E] transition-colors flex items-center gap-2"
               >
                 MVE Mailing List
-                <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-y-1">↓</span>
+                <span className="text-xl transition-all duration-300 text-[#58C391] group-hover/btn:text-[#E03E3E] group-hover/btn:translate-y-1 pb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </span>
               </a>
             </div>
           </motion.div>
@@ -278,7 +289,7 @@ export function Home() {
                       </>
                     }
                     href="/investment-summit"
-                    status="WINTER 2027"
+                    status="WINTER 2026"
                   />
                 </SectionReveal>
                 <SectionReveal delay={0.1}>
@@ -379,7 +390,7 @@ export function Home() {
                       </>
                     }
                     href="/competitions"
-                    status="Coming Soon"
+                    status="OPEN"
                   />
                 </SectionReveal>
               </div>
@@ -421,9 +432,14 @@ export function Home() {
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-[#F5F5F0] leading-tight mb-6">
                   Join the <span className="italic text-[#58C391] font-heading font-bold">MVE</span> Mailing List
                 </h2>
-                <p className="text-base md:text-lg text-[#A0A0A0] max-w-2xl mx-auto">
-                  For alumni, parents, and interested industry professionals. Sign up to stay updated on MVE events, student accomplishments, or opportunities to participate as a guest speaker, judge, or regular guest.
-                </p>
+                <div className="text-base md:text-lg text-[#A0A0A0] max-w-2xl mx-auto flex flex-col gap-4">
+                  <p className="font-bold tracking-wider text-[#F5F5F0]">
+                    For ALUMNI, PARENTS, and INTERESTED INDUSTRY PROFESSIONALS only.
+                  </p>
+                  <p>
+                    Bridging our parents and alumni network with student events and accomplishments.
+                  </p>
+                </div>
               </div>
 
               <form onSubmit={handleMailingListSubmit} className="flex flex-col gap-5 max-w-lg mx-auto">

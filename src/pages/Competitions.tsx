@@ -24,11 +24,7 @@ export function Competitions() {
           </motion.div>
 
 
-          <motion.div className="absolute top-24 z-20">
-            <span className="text-[#58C391] text-xs font-bold tracking-[0.2em] uppercase border-b border-[#58C391]/30 pb-1">
-              Coming Soon
-            </span>
-          </motion.div>
+          {/* Removed Coming Soon badge */}
 
           <motion.div
             initial={{ y: -200, opacity: 0 }}
@@ -69,11 +65,13 @@ export function Competitions() {
               Applications
             </h2>
             <div className="flex flex-col gap-4">
-              <div className="px-6 py-4 rounded-xl border border-white/[0.05] bg-white/[0.02] text-[#666666] font-bold text-xs tracking-[0.2em] uppercase cursor-not-allowed transition-all text-center">
-                Apply Here
-              </div>
+              <Link href="/competitions/forms">
+                <div className="px-6 py-4 rounded-xl border border-[#58C391]/30 hover:border-[#58C391] hover:bg-[#58C391]/10 text-white font-bold text-xs tracking-[0.2em] uppercase cursor-pointer transition-all text-center">
+                  Apply Here
+                </div>
+              </Link>
               <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#666666] border-l-2 border-[#58C391]/30 pl-3 text-left">
-                Links will activate once applications are open.
+                Click above to view available application forms.
               </p>
             </div>
           </motion.div>

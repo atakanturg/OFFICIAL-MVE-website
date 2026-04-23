@@ -4,7 +4,7 @@ import { config } from "../config";
 import { TimelineRow } from "../components/TimelineRow";
 import { SubmissionButton } from "../components/SubmissionButton";
 import { PageTransition } from "../components/PageTransition";
-import { ScrollIndicator } from "../components/ScrollIndicator";
+
 import { ProgramDescription } from "../components/ProgramDescription";
 
 export function InvestmentSummit() {
@@ -31,7 +31,7 @@ export function InvestmentSummit() {
           </Link>
         </motion.div>
 
-        <ScrollIndicator delay={0.5} />
+
 
         {/* Badge */}
         <motion.div
@@ -41,7 +41,7 @@ export function InvestmentSummit() {
           className="mb-8"
         >
           <span className="text-[#58C391] text-xs font-semibold tracking-[0.2em] uppercase border-b border-[#58C391]/30 pb-1">
-            WINTER 2027
+            WINTER 2026
           </span>
         </motion.div>
 

@@ -14,6 +14,7 @@ import { Sfere } from "./pages/Sfere";
 import { Reason } from "./pages/Reason";
 import { InvestmentChallenge } from "./pages/InvestmentChallenge";
 import { Competitions } from "./pages/Competitions";
+import { CompetitionApplications } from "./pages/CompetitionApplications";
 import { Contact } from "./pages/Contact";
 import { SfereKeynotes } from "./pages/SfereKeynotes";
 import { SfereRecentKeynotes } from "./pages/SfereRecentKeynotes";
@@ -42,13 +43,23 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !sessionStorage.getItem("mve_preloaded");
+    }
+    return true;
+  });
+
+  const handlePreloaderComplete = () => {
+    setLoading(false);
+    sessionStorage.setItem("mve_preloaded", "true");
+  };
 
   return (
     <div className="flex flex-col min-h-screen font-sans relative bg-[#0A0A0A] overflow-x-hidden grain">
       <AnimatePresence mode="wait">
         {loading && (
-          <Preloader onComplete={() => setLoading(false)} key="preloader" />
+          <Preloader onComplete={handlePreloaderComplete} key="preloader" />
         )}
       </AnimatePresence>
 
@@ -80,6 +91,7 @@ function App() {
               <Route path="/reason" component={Reason} />
               <Route path="/investment-challenge" component={InvestmentChallenge} />
               <Route path="/competitions" component={Competitions} />
+              <Route path="/competitions/forms" component={CompetitionApplications} />
               <Route path="/contact" component={Contact} />
               <Route path="/contact/keynotes/:id">{(params) => <HiddenContact params={params} />}</Route>
               <Route path="/sfere/keynotes/:year" component={SfereKeynotes} />
