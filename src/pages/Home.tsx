@@ -437,7 +437,7 @@ export function Home() {
                     For ALUMNI, PARENT & INTERESTED INDUSTRY PROFESSIONALS only.
                   </p>
                   <p>
-                    Bridging our parent & alumni network with student events & accomplishments.
+                    Connecting our parent & alumni network with student events & accomplishments.
                   </p>
                 </div>
               </div>
