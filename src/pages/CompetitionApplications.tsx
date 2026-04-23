@@ -37,21 +37,7 @@ export function CompetitionApplications() {
       }
     },
     {
-      name: "National Economics Challenge (NEC)",
-      link: "#",
-      isLocked: true,
-      details: {
-        teamSize: "3–4 members from the same school or organization",
-        output: "Exam / Quiz Bowl",
-        focus: "Academic Economics Theory",
-        requirements: "Registration via a teacher/coach.",
-        regulations: "Divisions: David Ricardo (first-time) or Adam Smith (advanced). 4 rounds: Micro, Macro, International, and Quiz Bowl.",
-        limitations: "All team members must be from the same school/club.",
-        keyDetail: "State round is a rapid-fire online exam. Top national teams travel to NYC for finals."
-      }
-    },
-    {
-      name: "Wharton Global Youth Investment Competition",
+      name: "Wharton Investment Competition",
       link: "https://forms.gle/ABm6C6QedDT42i7h6",
       isLocked: false,
       details: {
