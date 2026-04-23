@@ -11,7 +11,7 @@ import { ProgramCard } from "../components/ProgramCard";
 gsap.registerPlugin(ScrollTrigger);
 
 /* ─── Animated Counter ─── */
-function StatCounter({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
+function StatCounter({ value, suffix = "", label, duration = 1.5 }: { value: number; suffix?: string; label: string; duration?: number }) {
   const numRef = useRef<HTMLSpanElement>(null);
   const triggered = useRef(false);
 
@@ -28,7 +28,7 @@ function StatCounter({ value, suffix = "", label }: { value: number; suffix?: st
         const obj = { val: 0 };
         gsap.to(obj, {
           val: value,
-          duration: 1.5,
+          duration: duration,
           ease: "power2.out",
           onUpdate: () => {
             if (numRef.current) {
@@ -58,9 +58,19 @@ function StatCounter({ value, suffix = "", label }: { value: number; suffix?: st
 
 
 export function Home() {
+  const [isFirstLaunch, setIsFirstLaunch] = useState(() => {
+    return !sessionStorage.getItem("mve_home_animated");
+  });
   const [mailingEmail, setMailingEmail] = useState("");
   const [mailingStatus, setMailingStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const toEmail = "28aturgut@ransomeverglades.org";
+
+  useEffect(() => {
+    if (!sessionStorage.getItem("mve_home_animated")) {
+      setIsFirstLaunch(true);
+      sessionStorage.setItem("mve_home_animated", "true");
+    }
+  }, []);
 
   const handleMailingListSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -112,17 +122,36 @@ export function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-xs font-semibold tracking-[0.4em] uppercase text-[#58C391] mb-8"
+            className="text-xs font-semibold tracking-[0.4em] uppercase text-[#F5F5F0] mb-8"
           >
             Miami Venturing Entrepreneurs
           </motion.p>
 
           {/* Main Heading */}
-          <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] font-heading font-bold leading-[0.95] tracking-[-0.02em] text-[#F5F5F0] mb-10">
-            Competitions.<br />
-            <span className="italic text-[#58C391]">Student-Led.</span><br />
-            Financial Thinking.
-          </h1>
+          <div className="relative mb-10 overflow-visible flex items-center justify-center min-h-[150px] md:min-h-[200px] w-full">
+            <svg className="w-full max-w-[600px] overflow-visible" viewBox="0 0 400 150">
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="central"
+                className="font-['Black_Ops_One',_system-ui] text-[100px]"
+                style={{
+                  fill: isFirstLaunch ? "transparent" : "#58C391",
+                  stroke: "#58C391",
+                  strokeWidth: isFirstLaunch ? 2 : 0,
+                  strokeDasharray: isFirstLaunch ? 1500 : 0,
+                  strokeDashoffset: isFirstLaunch ? 1500 : 0,
+                  paintOrder: "stroke fill",
+                  animation: isFirstLaunch 
+                    ? "drawStroke 3s ease-in-out forwards, fillText 1s ease-in 2.5s forwards" 
+                    : "none"
+                }}
+              >
+                MVE
+              </text>
+            </svg>
+          </div>
 
           {/* Subtitle */}
           <motion.p
@@ -131,7 +160,7 @@ export function Home() {
             transition={{ delay: 0.8 }}
             className="text-lg md:text-xl text-[#A0A0A0] max-w-2xl mx-auto leading-relaxed"
           >
-            As Ransom Everglades' largest student-led club, we are focused on navigating the economic side of the world.
+            Ransom Everglades’ premier student-led organization, dedicated to <span className="text-[#58C391] font-bold">competition in economics</span>, <span className="text-[#58C391] font-bold">high-impact event production</span>, and <span className="text-[#58C391] font-bold">detailed financial education</span>.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -212,8 +241,8 @@ export function Home() {
           <SectionReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
               <StatCounter value={200} suffix="+" label="Active Members" />
-              <StatCounter value={4} suffix="" label="Years Running" />
-              <StatCounter value={6} suffix="" label="Core Programs" />
+              <StatCounter value={4} suffix="" label="Years Running" duration={0.6} />
+              <StatCounter value={6} suffix="" label="Core Programs" duration={0.6} />
             </div>
           </SectionReveal>
 
